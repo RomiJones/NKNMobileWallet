@@ -1,0 +1,57 @@
+page-firstguide {
+  .scroll-content{
+    color: #333;
+  }
+  .firstGuideContainer{
+    height: 100%;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+  }
+  .firstLogo{
+    height: 33vh;
+    background: url("../assets/nkn/createWallet/wallet@2x.png") no-repeat;
+    background-size: 39.46vw auto;
+    background-position: center bottom;
+    margin-bottom: 4.16rem;
+  }
+  #firstBtn{
+    text-align: center;
+    padding: 0 3.25rem;
+  }
+  .buttonBox{
+
+  }
+  button{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 3.75rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border:none;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    padding:0;
+  }
+  .createBtn{
+    color: #fff;
+    background-color: rgba(49,139,236,1);
+  }
+  .importBtn{
+    color: rgba(49,139,236,1);;
+    background-color: rgba(240,240,240,1);
+  }
+  .itemTextTip{
+    font-size: 1.2rem;
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .itemTextTip a{
+    color: #fff;
+    text-decoration:none;
+  }
+
+
+}

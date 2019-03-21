@@ -1,0 +1,211 @@
+[
+  {
+    "common":{
+      "copied":"已复制",
+      "copyAddress":"复制收款地址",
+      "copyKeystore":"复制 Keystore",
+      "ok":"确定",
+      "confirm":"确认",
+      "cancle":"取消",
+      "pwWrong":"密码不正确"
+    },
+    "createWallet":{
+      "pwLengthTip":"不少于8位字符，建议混合大小写字母、数字、特殊字符",
+      "pwSoWeak":"密码强度太弱",
+      "pwNums":"个字符",
+      "createSuccess":"创建成功",
+      "backupTip":"NKN钱包目前没有助记词备份方式，请您务必备份好Keystore文件和钱包密码",
+      "walletNameRequired":"请输入1~12位钱包名称",
+      "pwRequired":"请输入不少于8位字符的密码",
+      "pwRepeatFail":"密码不一致，请重新输入",
+      "creating":"创建中",
+      "known":"知道了"
+    },
+    "importWallet":{
+      "importing":"导入中",
+      "requireRight":"请填写正确的 keystore 和密码",
+      "keystoreInvalid":"keystore 文件无效"
+    },
+    "scanQRcode":{
+      "askForScan":"请允许授权，否则扫码功能无法使用"
+    },
+    "sysSetting":{
+      "language":"选择语言"
+    },
+    "transferCoin":{
+      "addressRightTip":"友情提示：地址一般为0x开头的42位字符或ENS域名",
+      "invalidAmount":"无效的金额",
+      "amountLack":"余额不足",
+      "pwRequired":"密码不能为空",
+      "txSendFailed":"发送交易失败",
+      "txFailed":"交易失败",
+      "txError":"交易异常",
+      "txJamTip":"交易数据拥堵，请前往 https://etherscan.io/ 查询实际交易情况"
+    },
+    "walletSetting":{
+      "requireNameTip":"请输入1~12位钱包名称",
+      "walletDeleting":"删除钱包中",
+      "inputPw":"请输入密码",
+      "inputPwSubTitle":"请慎重，此操作无法撤销",
+      "pwRequired":"密码不能为空",
+      "walletExporting":"导出钱包中"
+    }
+  },
+  {
+    "common":{
+      "copied":"copied",
+      "copyAddress":"Copy Address",
+      "copyKeystore":"Copy Keystore",
+      "ok":"OK",
+      "confirm":"Confirm",
+      "cancle":"Cancle",
+      "pwWrong":"Wrong Password"
+    },
+    "createWallet":{
+      "pwLengthTip":"At least 8 characters, recommended to mix uppercase and lowercase alphabets, numbers and symbols.NKN wallet will not store your password, please backup diligently.",
+      "pwSoWeak":"Password is to weak, easily get hacked",
+      "pwNums":" characters",
+      "createSuccess":"Create Success",
+      "backupTip":"Please backup your Keystore and wallet passwrod！",
+      "walletNameRequired":"Please input name between 1 to 12 characters",
+      "pwRequired":"Password must be at least 8 characters",
+      "pwRepeatFail":"Password doesn't match, please try again",
+      "creating":"Generating",
+      "known":"Got it"
+    },
+    "importWallet":{
+      "importing":"Importing",
+      "requireRight":"Please input correct keystore and password",
+      "keystoreInvalid":"Invalid keystore content"
+    },
+    "scanQRcode":{
+      "askForScan":"Please allow authorization, otherwise you can't scan code"
+    },
+    "sysSetting":{
+      "language":"Language"
+    },
+    "transferCoin":{
+      "addressRightTip":"Tips: The correct address is generally 42 characters start with 0x or ENS domain",
+      "invalidAmount":"Invalid Amount",
+      "amountLack":"Insufficient Balance",
+      "pwRequired":"Password Can Not Be Blank",
+      "txSendFailed":"Transaction Failed",
+      "txFailed":"Transaction Failed",
+      "txError":"Transaction Abnormal",
+      "txJamTip":"If the transaction is congested, please check the actual transaction status at https://etherscan.io/"
+    },
+    "walletSetting":{
+      "requireNameTip":"Please input name between 1 to 12 characters",
+      "walletDeleting":"Deleting",
+      "inputPw":"Please Enter Password",
+      "inputPwSubTitle":"Caution! This operation cannont be revoked!",
+      "pwRequired":"Password Can Not Be Blank",
+      "walletExporting":"Exporting"
+    }
+  },
+  {
+    "common":{
+      "copied":"Đã sao chép",
+      "copyAddress":" Sao chép địa chỉ nhận tiền ",
+      "copyKeystore":"Sao chép Keystore",
+      "ok":"Xác nhận",
+      "confirm":"Xác nhận",
+      "cancle":"Hủy bỏ",
+      "pwWrong":"Mật khẩu không chính xác"
+    },
+    "createWallet":{
+      "pwLengthTip": "Không được ít hơn 8 ký tự, đề nghị hỗn hợp giữa chữ viết hoa, chữ viết thường, con số, ký tự đặc biệt",
+      "pwSoWeak":"Độ mạnh mật khẩu quá yếu",
+      "pwNums":" Một ký tự",
+      "createSuccess":"Tạo thành công",
+      "backupTip":"Ví tiền NKN hiện tại không có phương pháp sao lưu giúp dễ nhớ, bạn phải sao lưu tốt tập tin Keystore và mật khẩu ví tiền",
+      "walletNameRequired": "Hãy nhập tên ví tiền từ 1~12 ký tự",
+      "pwRequired": "Nhập mật khẩu không ít hơn 8 ký tự",
+      "pwRepeatFail": "Mật khẩu không thống nhất, xin vui lòng nhập lại",
+      "creating": "Đang tạo",
+      "known": "Biết rồi"
+    },
+    "importWallet":{
+      "importing": "Đang nhập vào",
+      "requireRight": "Hãy điền keystore và mật khẩu chính xác",
+      "keystoreInvalid": "Tập tin keystore không hợp lệ"
+    },
+    "scanQRcode":{
+      "askForScan": "Hãy cho phép nhượng quyền, nếu không thì không sử dụng được chức năng quét mã "
+
+    },
+    "sysSetting":{
+      "language": "Lựa chọn ngôn ngữ"
+    },
+    "transferCoin":{
+      "addressRightTip": "Gợi ý thân thiện：địa chỉ thường là 42 ký tự khởi đầu là 0x hoặc tên miền ENS",
+      "invalidAmount": "Số tiền không hợp lệ",
+      "amountLack": "Số dư không đủ",
+      "pwRequired": "Mật khẩu không được để trống",
+      "txSendFailed": "Gửi giao dịch thất bại",
+      "txFailed": "Giao dịch thất bại",
+      "txError": "Giao dịch bất thường",
+      "txJamTip": "Dữ liệu giao dịch bị ùn tắc, hãy dùng https://etherscan.io/ truy vấn tình hình giao dịch thực tế"
+    },
+    "walletSetting":{
+      "requireNameTip": "Hãy nhập tên ví tiền từ 1~12 ký tự",
+      "walletDeleting": "Đang xóa ví tiền",
+      "inputPw": "Hãy nhập mật khẩu",
+      "inputPwSubTitle": "Hãy thận trọng, thao tác này không thể xóa bỏ",
+      "pwRequired": "Mật khẩu không được để trống",
+      "walletExporting": "Đang xuất từ ví tiền ra"
+    }
+  },
+  {
+    "common":{
+      "copied":"이미 복사",
+      "copyAddress":"수금주소 복사하기",
+      "copyKeystore":"복사 Keystore",
+      "ok":"확인",
+      "confirm":"확인",
+      "cancle":"취소",
+      "pwWrong":"잘못된 비밀번호입니다 "
+    },
+    "createWallet":{
+      "pwLengthTip":"최소 8자리여야 하고 대소문자, 수자, 특수부호를 혼합시키는 것을 권장합니다",
+      "pwSoWeak":"비밀번호 강도가 너무 약합니다",
+      "pwNums":" 개 자리",
+      "createSuccess":"창설 성공",
+      "backupTip":"NKN 포켓에는 현재 조사 백업방식이 없으니 반드시 Keystore과 포켓 비밀번호를 잘 백업해야 합니다 ",
+      "walletNameRequired":"1~12자리의 포켓이름을 입력하세요 ",
+      "pwRequired":"최소 8자리의 비밀번호를 입력하세요",
+      "pwRepeatFail":"비밀번호가 일치하지 않음으로 다시 입력해 주세요",
+      "creating":"창설중",
+      "known":"알겠습니다"
+    },
+    "importWallet":{
+      "importing":"도입중",
+      "requireRight":"정확한 keystore과 비밀번호를 입력해 주세요",
+      "keystoreInvalid":"파일 무효"
+    },
+    "scanQRcode":{
+      "askForScan":"수권을 허락해야 스캔 기능 사용이 가능합니다"
+    },
+    "sysSetting":{
+      "language":"언어선택"
+    },
+    "transferCoin":{
+      "addressRightTip":"제시: 주소는 보통 0x으로 시작되는 42자리 문자나 ENS구역명이다",
+      "invalidAmount":"무효 금액",
+      "amountLack":"잔금 부족",
+      "pwRequired":"비밀번호가 공백이어서는 않됩니다",
+      "txSendFailed":"거래 발송 실패",
+      "txFailed":"거래 실패",
+      "txError":"거래 이상",
+      "txJamTip":"데이터 거래가 붐비는 상태임으로 https://etherscan.io/로 가서 실제 거래상황을 조회하세요 "
+    },
+    "walletSetting":{
+      "requireNameTip":"1~12자리 포켓이름을 입력하세요",
+      "walletDeleting":"포켓 삭제중",
+      "inputPw":"비밀번호를 입력해 주세요",
+      "inputPwSubTitle":"이 조작은 되돌리수 없으니 신중하세요",
+      "pwRequired":"비밀번호가 공백이여서는 않됩니다",
+      "walletExporting":"포켓으로 도출중"
+    }
+  }
+]

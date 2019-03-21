@@ -1,0 +1,51 @@
+page-importwallet {
+
+  .scroll-content{
+    padding: 0 1.875rem;
+  }
+  .keystoreInputItem{
+    min-height: 3.4rem;
+    display: flex;
+    align-items: flex-end;
+  }
+  textarea{
+    font-size: 1rem;
+    color: $fontColor1;
+    line-height: 1.3rem;
+    resize: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-bottom: .55px solid $borderColor2;
+  }
+  textarea::-webkit-input-placeholder,input::-webkit-input-placeholder{
+    color: $fontColor2;
+    font-size: 1.4rem;
+  }
+  .importBtn{
+    width: 24.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    padding: 0!important;
+    font-size: 1.5rem;
+    background-color: $fontColor3;
+  }
+  .importConfirmBox{
+    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 18.66vw;
+  }
+
+  .header .bar-button::after{
+    display: none;
+  }
+
+}

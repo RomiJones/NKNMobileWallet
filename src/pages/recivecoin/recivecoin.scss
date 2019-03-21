@@ -1,0 +1,195 @@
+page-recivecoin {
+
+  .scroll-content{
+    background: rgb(54,74,129);
+    padding-top: 3.3rem;
+  }
+  .walletBox{
+    width: 84vw;
+    height: 104vw;
+    background:url("../assets/nkn/receive/window@2x.png") no-repeat left top/100% 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .box1{
+    height: 26.26%;
+    color: #fff;
+    text-align: center;
+    padding-top: 5.33vw;
+  }
+  .walletTypeBox{
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    margin-bottom: 4.8vw;
+  }
+  .walletAdrBox{
+    padding: 0 .9rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .walletAdrBox>span{
+    max-width: calc(100% - 13vw);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .box2{
+    height: 73.74%;
+    text-align: center;
+    padding-top: 10.4vw;
+    position: relative;
+  }
+  .qrCodeBox{
+    position: relative;
+  }
+  .qrCodeBox .qrBox1{
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2.87vw;
+  }
+  .qrcode{
+    width: 42.67vw;
+    height: 42.67vw;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .qrcode canvas{
+    display: block;
+    width: 100%;
+  }
+  .qrLogo{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+    background: url("../assets/nkn/receive/logo.png") no-repeat center / 10vw auto;
+    width: 42.67vw;
+    height: 42.67vw;
+    z-index: 10;
+  }
+  .btnsBox{
+    height: 13.05vw;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+  }
+  .btnsBox::before{
+    content: "";
+    display: block;
+    width: 200%;
+    height: 1px;
+    background-color: $borderColor1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(.5) translate(-50%,0);
+  }
+  .btnItem{
+    flex: 1;
+    color: $fontColor3;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .btnItem i{
+    display: block;
+    width: 1.25rem;
+    height: 100%;
+    background: no-repeat center/100% auto;
+    margin-right: .5rem;
+  }
+  .btn1 i{
+    background-image: url("../assets/nkn/receive/switch@2x.png");
+  }
+  .btn2 i{
+    background-image: url("../assets/nkn/receive/amount@2x.png");
+  }
+  .btn1::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 4.2rem;
+    background-color: $borderColor1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%) scale(.5);
+  }
+
+  .assetTypeBox{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.4);
+    display: flex;
+    align-items: flex-end;
+  }
+  .assetTypeBox>div{
+    width: 100vw;
+    background: #fff;
+    height: 49.34vw;
+  }
+  .typeItem{
+    padding-left: 16vw;
+  }
+  .typeItem:not(:last-child)>div{
+    border-bottom: .55px solid $borderColor1;
+  }
+  .typeContentItem1{
+    padding: 3.8vw 0;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    position: relative;
+  }
+  .typeContentItem1::before{
+    content: "";
+    display: block;
+    width: 84vw;
+    height: 1px;
+    background-color: $borderColor1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .coinItem{
+    background: no-repeat left 1.25rem center/8vw 8vw;
+  }
+  .itemEth{
+    background-image: url("../assets/nkn/home/ETH@2x.png");
+  }
+  .itemNkn{
+    background-image: url("../assets/nkn/home/NKNcoin@2x.png");
+  }
+  .typeContentItem2{
+    height: 18.61vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2rem;
+  }
+  .coinItem .name{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2.5vw;
+  }
+  .coinItem .num{
+    font-size: 1rem;
+    color: rgb(123,127,138);
+  }
+
+  #img-buffer{display: none}
+}

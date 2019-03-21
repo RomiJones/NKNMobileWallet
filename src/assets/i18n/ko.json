@@ -1,0 +1,149 @@
+{
+  "sysSetting":{
+    "header":"시스템 설정",
+    "selectLang":"언어 선택"
+  },
+  "tabs":{
+    "asset":"자산",
+    "my":"나"
+  },
+  "my":{
+    "header":"나",
+    "manageWallet":"포켓 관리",
+    "sysSetting":"시스템 설정",
+    "joinGroup":"SNS 가입",
+    "aboutUs":"우리에 관한"
+  },
+  "asset":{
+    "totalAsset":"포켓 총자산"
+  },
+  "switchWallet":{
+    "header":"포켓 교체",
+    "asset":"포켓 자산",
+    "createWallet":"포켓 창설"
+  },
+  "coinShow":{
+    "latestTxInfo":"최근 거래 기록",
+    "transferBtn":"이체",
+    "receiveBtn":"수금",
+    "pending":"펜딩",
+    "txError":"거래 이상",
+    "txFailed":"거래 실패"
+  },
+  "transferPage":{
+    "header":"이체",
+    "balance":" 잔금",
+    "receiverAddress":"수취인 포켓 주소",
+    "amount":"이체 금액",
+    "memo":"비고",
+    "miningFee":"미닝페이",
+    "slow":"느린",
+    "fast":"빠른",
+    "nextBtn":"다음",
+    "payRequest":{
+      "header":"지불 세부사항",
+      "txInfo":"오더정보",
+      "txInfoContent":"이체",
+      "payTo":"전입 주소",
+      "payBy":"지불 포켓",
+      "fees":"미닝페이",
+      "amount":"금액",
+      "confirmBtn":"확인"
+    },
+    "enterPw":{
+      "header":"포켓 비밀번호",
+      "inputPw":"비밀번호 입력",
+      "confirmBtn":"확인",
+      "sending":"발송중…"
+    }
+  },
+  "receiveCode":{
+    "header":"수금코드",
+    "address":"주소",
+    "copyBtn":"수금주소 복사"
+  },
+  "scanCode":{
+    "header":"스캔중..."
+  },
+  "joinGroup":{
+    "header":"SNS 가입",
+    "wechat":"위챗 단체방"
+  },
+  "aboutUs":{
+    "header":"우리에 관한",
+    "curVersion":"현재 버전：",
+    "enterWeb":"NKN 공식사이트 들어가기"
+  },
+  "manageWallet":{
+    "header":"포켓 관리",
+    "createBtn":"포켓 창설",
+    "importBtn":"포켓 도입"
+  },
+  "walletSetting":{
+    "saveBtn":"저장",
+    "walletName":"포켓명",
+    "edit":"클릭후 수정하기",
+    "exportKeystore":"도출Keystore",
+    "deleteBtn":"포켓 삭제하기"
+  },
+  "createWallet":{
+    "header":"포켓 창설",
+    "walletName":"포켓명",
+    "password":"비밀번호",
+    "repeatPw":"비밀번호 반복하기",
+    "agreeText":"이미 내용을 구독했으며 동의한다",
+    "agreeUrlText":"서비스 및 프라이버시 조항",
+    "tipText":"주의! NKN는 유저의 포켓 비밀번호를 저장하지 않으며 당신을 도와 비밀번호를 찾아오거나 재설정을 할수 없기에 부디 본인의 비밀번호를 잘 기억하시기 바랍니다",
+    "createBtn":"포켓 창설",
+    "importBtn":"포켓 도입",
+    "pwStrength":{
+      "low":"약",
+      "mid":"일반",
+      "strong":"강",
+      "good":"아주 좋다"
+    }
+  },
+  "importWallet":{
+    "header":"포켓 도입",
+    "tipText":"직접 복사 붙이기로 공식 포켓 keystore 파일 내용을 입력창에 넣어 주시거나 keystore 내용의 QR코드를 형성시킴으로 스캔을 통해 입력하세요.",
+    "keystoreContent":"keystore 문서내용",
+    "inputPw":"Keystore 비밀번호",
+    "agreeText":"이미 내용을 구독했으며 동의한다",
+    "agreeUrlText":"서비스 및 프라이버시 조항",
+    "importBtn":"도입 시작"
+  },
+  "exportKeystore":{
+    "header":"도출Keystore",
+    "titleKeystore":"Keystore 문서",
+    "titleQRcode":"QR코드",
+    "keystoreTip":{
+      "title1":"오프라인 저장",
+      "text1":"Keystore문서를 복사 붙이기로 안전한 오프라인한 곳에 저장하세요. 절대 이메일, 노트북, 클라우드, SNS에 저장하지 말것이며 그것은 아직 위험하다",
+      "title2":"절대 인터넷 전송을 사용하지 마세요",
+      "text2":"인터넷 도구로 Keystore 문서를 전송하지 말것이며 해커에게 발견될 시에는 만회할수 없는 손해가 발생할 것이다. 오프라인 장비로 QR코드 스캔 방식으로 전송하는 것을 권장한다.",
+      "title3":"비밀번호 금고에 저장",
+      "text3":"온라인 저장할 경우에는 안전등급이 더욱 높은 1password 등 비밀번호 보관 소프트웨어로 Keystore를 보관하는 것을 권장한다."
+    },
+    "keystoreBtn":"복사 Keystore",
+    "copiedTip":"이미 복사",
+    "QRcodeTip":{
+      "title1":"직접 스캔만 가능",
+      "text1":"QR코드 저장, 캡처, 촬영은 금지. 오직 유저가 안전한 환경에서 직접 스캔하는 방식으로 포켓 도입이 가능하다",
+      "title2":"안전한 환경에서 사용하기",
+      "text2":"주변이 인간이나 카메라가 없는 상황에서 사용하세요. QR코드가 타인에게 유출될 시에는 만회할수 없는 손해가 발생할수 있다."
+    },
+    "QRcodeShowText":{
+      "tip":"주변 인간이나 카메라가 없는것을 이미 확인",
+      "btn":"QR코드 보기"
+    }
+  },
+  "firstGuide":{
+    "createBtn":"포켓 창설",
+    "importBtn":"포켓 도입"
+  },
+  "noScreenShot":{
+    "noPhotoTitle":"촬영 금지",
+    "noPhotoContent":"주변에 인간이나 카메라가 없는 것을 확보하세요! 캡처나 촬영의 방식으로 Keystore 문서나 QR코드를 저장하기 마세요!",
+    "ok":"알겠습니다"
+  }
+}

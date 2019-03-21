@@ -1,0 +1,14 @@
+page-joingroup {
+
+  .item{
+    border: none!important;
+  }
+  .item .label{
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  .item-ios ion-icon[item-left], .item-ios ion-icon[item-right], .item-ios ion-icon[item-start], .item-ios ion-icon[item-end]{
+    padding-top: 4px;
+  }
+
+}

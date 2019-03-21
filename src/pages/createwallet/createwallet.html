@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="navBack()">
+        <ion-icon name="arrow-back" color="dark"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>{{'createWallet.header' | translate }}</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="walletForm" *ngIf="!isCreateSuccess">
+    <div class="walletItem">
+      <input type="text" placeholder="{{'createWallet.walletName' | translate }}" [(ngModel)]="walletName">
+    </div>
+
+    <div class="walletItem">
+      <div class="walletPasswordItem">
+        <ion-input type="password" placeholder="{{'createWallet.password' | translate }}"  [(ngModel)]="walletPassword" class="walletPw" *ngIf="isHidePW1" (ionChange)="checkPassword()"></ion-input>
+        <ion-input type="text" placeholder="{{'createWallet.password' | translate }}"  [(ngModel)]="walletPassword" class="walletPw" *ngIf="!isHidePW1" (ionChange)="checkPassword()"></ion-input>
+
+        <div class="passwordHideBtn" [ngClass]="{show: !isHidePW1,hidePw:isHidePW1 }" (click)="isHidePW1 = !isHidePW1 "></div>
+      </div>
+
+      <div class="pwRequireTip" *ngIf="!pwRule1">{{passwordValidateTip.tip1}}</div>
+
+    </div>
+
+    <div class="walletItem">
+      <div class="walletPasswordItem">
+        <ion-input type="password" placeholder="{{'createWallet.repeatPw' | translate }}"  [(ngModel)]="walletPasswordAgain" class="walletPw" *ngIf="isHidePW2" (ionChange)="checkPasswordConfirm()"></ion-input>
+        <ion-input type="text" placeholder="{{'createWallet.repeatPw' | translate }}"  [(ngModel)]="walletPasswordAgain" class="walletPw" *ngIf="!isHidePW2" (ionChange)="checkPasswordConfirm()"></ion-input>
+
+        <div class="passwordHideBtn" [ngClass]="{show: !isHidePW2,hidePw:isHidePW2 }" (click)="isHidePW2 = !isHidePW2 "></div>
+      </div>
+
+      <div class="pwRequireTip" *ngIf="!pwRule2">{{passwordValidateTip.tip2}}</div>
+      <div class="pwRequireTip" *ngIf="!pwRule3">{{passwordValidateTip.tip3}}</div>
+    </div>
+
+  </div>
+
+  <div class="ketstoreBox" *ngIf="isCreateSuccess">
+    <div class="keystoreTip"><i></i>Security Reminder</div>
+    <div class="keystoreTipContent">You must save and backup your keystore below. If you lose it, you lose access to your assets.</div>
+    <div class="keystoreValueBox">
+      <div class="keystoreValue">{{newKeystore}}</div>
+      <div class="copyKeystoreBox" (click)="copyWalletAddress()"><span></span></div>
+    </div>
+  </div>
+
+  <div class="importConfirmBox">
+    <button class="createBtn" (click)="startCreateWallet()">{{'createWallet.createBtn' | translate }}</button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ImportwalletPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'importWallet.header' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="scanQRcode()">
+        <span class="scanQRcode" ></span>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="walletForm">
+
+    <div class="walletItem keystoreInputItem">
+      <textarea placeholder="{{'importWallet.keystoreContent' | translate }}" [(ngModel)]="walletKeystore" id="keystore"></textarea>
+    </div>
+
+    <div class="walletItem">
+      <div class="walletPasswordItem">
+        <input type="password" placeholder="{{'importWallet.inputPw' | translate }}"  [(ngModel)]="walletPassword" class="walletPw" *ngIf="isHidePW1">
+        <input type="text" placeholder="{{'importWallet.inputPw' | translate }}"  [(ngModel)]="walletPassword" class="walletPw" *ngIf="!isHidePW1">
+        <div class="passwordHideBtn" [ngClass]="{show: !isHidePW1,hidePw:isHidePW1 }" (click)="isHidePW1 = !isHidePW1 "></div>
+      </div>
+
+      <div class="pwRequireTip" [ngClass]="{no:passrule=='no',yes:passrule=='yes'}" *ngIf="isPasswordRule">{{passwordValidateTip}}</div>
+
+    </div>
+
+    <!--<div class="walletItem">
+      <div class="walletPasswordItem">
+        <input type="password" placeholder="{{'importWallet.confirmPw' | translate }}"  [(ngModel)]="walletPasswordAgain" class="walletPw" *ngIf="isHidePW2">
+        <input type="text" placeholder="{{'importWallet.confirmPw' | translate }}"  [(ngModel)]="walletPasswordAgain" class="walletPw" *ngIf="!isHidePW2">
+        <div class="passwordHideBtn" [ngClass]="{show: !isHidePW2,hidePw:isHidePW2 }" (click)="isHidePW2 = !isHidePW2 "></div>
+      </div>
+    </div>-->
+
+  </div>
+
+
+  <div class="importConfirmBox">
+    <button class="importBtn" (click)="startImportWallet()">{{'importWallet.importBtn' | translate }}</button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,17 @@
+<!-- Generated template for the WalletqrcodeComponent component -->
+
+<div class="walletAddressQRcodeBox">
+  <div class="topLine">
+    <div class="closeQRcodeBox" (click)="hideQRcode()"></div>
+    <div class="QRcodeTitle">收款码</div>
+  </div>
+  <div class="QRcodeBox">
+    <div class="QRcodeContent">
+      <div class="walletName"><span>{{walletName}}</span></div>
+      <div style="font-size: 1.4rem">地址：</div>
+      <div class="walletAddress">{{walletAddress}}</div>
+      <div class="walletQRcode"><div></div></div>
+      <button class="copyAddressBtn" (click)="copyReciveAddress()">{{copyBtnText}}</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'switchWallet.header' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="walletBox">
+    <div class="walletItem" *ngFor="let item of WallatListArray;let i = index;" (click)="selectWallet(i)">
+      <div class="walletItemIcon">
+        <div><img src="{{item.imgUrl}}" alt=""></div>
+      </div>
+      <div class="walletItemInfo">
+        <div class="walletItemName">{{item.walletName}}</div>
+        <div class="walletItemAsset">
+          <span>{{'switchWallet.asset' | translate }}</span><span class="walletItemAssetNum"><i>{{item.ethCoinNum}}</i>ether</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nknBtn" [navPush]="createWallet">{{'switchWallet.createWallet' | translate }}</div>
+
+</ion-content>

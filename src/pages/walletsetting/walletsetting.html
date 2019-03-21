@@ -1,0 +1,37 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{curWallet.walletName}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="saveWallet()">{{'walletSetting.saveBtn' | translate }}</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-scroll>
+    <div class="walletShowBox">
+      <div class="walletIcon"><img src="{{curWallet.imgUrl}}" alt=""></div>
+      <div class="walletNum"><span>{{ethCoinNum}}</span><span>Ether</span></div>
+      <div class="walletAddress">{{curWallet.walletAddressShorten}}</div>
+    </div>
+
+    <div class="walletGroup">
+      <div class="walletItem walletItemName">
+        <div>{{'walletSetting.walletName' | translate }}</div>
+        <div>
+          <input type="text" [(ngModel)]="newWalletName" class="walletNameInput">
+          <div class="editName">{{'walletSetting.edit' | translate }}</div>
+        </div>
+      </div>
+      <!--<div class="walletItem">修改密码</div>-->
+    </div>
+
+    <div class="walletGroup walletGroupBox">
+      <div class="walletItem exportKeystore" (click)="exportKeystore()">{{'walletSetting.exportKeystore' | translate }}</div>
+    </div>
+
+    <div class="deleteWalletBtn" (click)="deleteWallet()">{{'walletSetting.deleteBtn' | translate }}</div>
+</ion-content>
+
+<!--<div class="saveWalletBtn" (click)="saveWallet()">保存</div>-->
+

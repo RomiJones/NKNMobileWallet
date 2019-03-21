@@ -1,0 +1,423 @@
+page-transfercoin {
+
+  .coinInfoBox{
+    height: 6.25rem;
+    font-size: 1.2rem;
+    padding: 1.25rem;
+  }
+  .coinInfoBox>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .coinInfo1{
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: $fontWeight2;
+    margin-bottom: .6rem;
+  }
+  .coinInfoBox .coinInfoNum{
+    max-width: calc(100% - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .coinInfoNum span{
+    display: block;
+  }
+  .coinInfoNum .num{
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .coinInfoNum>span:last-child{
+    margin-left: 2px;
+  }
+  .coinInfo2{
+    line-height: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: $fontWeight1;
+  }
+  .coinInfo2 .amount{
+    width: 60%;
+  }
+  .coinInfo2 .amount .item-ios,.coinInfo2 .amount .item-inner,.coinInfo2 .amount .text-input-ios{
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-height: 1rem;
+  }
+  .coinInfo2 .amount .text-input-ios{
+    font-size: 1.6rem;
+    font-weight: $fontWeight1;
+    color: $fontColor1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .scanQRcode{
+    background-image: url("../assets/icon/photoScanLight.png");
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: 100;
+    height: 3rem;
+    width: 3rem;
+    background-size: 2rem auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .transferForm{
+    padding: 1.25rem;
+  }
+  .transferForm>div{
+    position: relative;
+  }
+  .formItem:not(:last-child){
+    margin-bottom: 0.42rem;
+  }
+  .formItem .itemType{
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+  }
+  .formItem .address{
+    line-height: 3.5rem;
+    font-size: 1.4rem;
+  }
+  .formItem .itemInput{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .transferForm .item-ios{
+    min-height: 3rem!important;
+  }
+  .transferForm .item-ios,.transferForm .item-ios.item-block .item-inner{
+    padding: 0;
+  }
+  .transferForm .text-input{
+    margin: 0;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid $borderColor2;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $fontColor1;
+  }
+  .transferForm .itemInputPw .text-input{
+    width: 80%;
+    border: none;
+  }
+  .transferForm .itemInputPw{
+    border-bottom: 1px solid $borderColor2;
+  }
+  .transferForm .text-input::-webkit-input-placeholder,.transferForm input::-webkit-input-placeholder{
+    color: $fontColor2;
+    font-size: 1.4rem;
+  }
+  .transferForm .itemInputAddress .text-input{
+    font-weight: $fontWeight1;
+  }
+
+  .gasRange{
+    padding: 1.25rem;
+  }
+  .gasRange .title{
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .coastEtherEs{
+    color: $fontColor3;
+  }
+  .coastEtherEs span{
+    margin: 0 2px;
+  }
+  .range-ios{
+    padding: 0;
+    width: 96%;
+    margin: 0 auto;
+  }
+  .range-ios .range-bar{
+    background: rgb(218,220,226);
+    height: 2px;
+  }
+  .range-ios .range-bar-active{
+    background: $fontColor3;
+  }
+  .range-ios .range-knob{
+    width: 1.67rem;
+    height: 1.67rem;
+    left: 0;
+    top: 0;
+    position: relative;
+  }
+  .range-ios .range-knob-handle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nextBtn{
+    margin: 4rem 0 2rem;
+  }
+  .nextBtn button,.confirmToTransferBtn,.confirmAgainBtn{
+    width: 79.2vw;
+    display: block;
+    height: 12vw;
+    line-height: 12vw;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: $fontColor3;
+    margin: 0 auto;
+  }
+
+  .transferConfirmModal{
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top:0;
+    z-index: 99999;
+  }
+
+  .transferConfirmModal>div{
+    background-color: #fff;
+    position: absolute;
+    width: 100vw;
+    height: 35.1rem;
+    left: 0;
+    bottom: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .transferModalForm{
+    padding: 2.42rem 1.3rem 0;
+  }
+  .transferNumItem{
+    line-height: 2rem;
+    font-size: 2rem;
+    font-weight: $fontWeight1;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .tranferConfirmItem{
+    padding: .625rem 0;
+    font-size: 1.2rem;
+  }
+  .tranferConfirmItem:not(:last-child){
+    border-bottom: 1px solid $borderColor2;
+  }
+  .tranferConfirmItem>div{
+    line-height: 1.66rem;
+  }
+  .tranferConfirmItem .itemName{
+    float: left;
+    width: 8.67rem;
+    color: $fontColor2;
+  }
+  .tranferConfirmItem .itemCont{
+    width: calc(100% - 8.7rem);
+    margin-left: 8.7rem;
+    color: $fontColor1;
+    font-weight: $fontWeight2;
+  }
+  .gasCoastItem .itemCont{
+    text-align: right;
+  }
+  .gasCalc{
+    color: #ccc;
+    transform: scale(.8);
+    margin-right: -2.2rem;
+  }
+  .moneyItem .itemName{
+    color: #4a4a4a!important;
+  }
+  .moneyItem>div{
+    height: 2.8rem;
+    line-height: 2.8rem;
+  }
+  .moneyItem .itemCont{
+    color: #4a4a4a;
+    font-size: 2rem;
+    text-align: right;
+  }
+  .transferConfirmModal header{
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.3rem;
+    border-bottom: .55px solid $borderColor2;
+  }
+  .inputPwBox>div{
+    padding: 2.33rem 1.3rem 0;
+    height: calc(100% - 3.75rem);
+    position: relative;
+  }
+  .inputPwBox .backBtn{
+    font-size: 3.2rem;
+    color: $fontColor1;
+  }
+  .inputPwBox .text-input{
+    margin: 0;
+    width: 90%;
+    height: 3rem;
+  }
+  .inputPwBox .label-ios[stacked]{
+    color: $fontColor1;
+    font-size: 1.2rem;
+    font-weight: $fontWeight1;
+    margin: 0!important;
+  }
+  .inputPwBox .confirmToTransferBtn,.showTransferInfoBox .confirmToTransferBtn{
+    position: absolute;
+    left: 50%;
+    bottom: 8.4vw;
+    transform: translate(-50%,0);
+  }
+  .inputPwBox .itemInputPw{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .55px solid $borderColor2;
+  }
+  .transferConfirmModal .transferConfirmLoading{
+    background-color: transparent;
+    z-index: 999;
+    display: none;
+    width: 100vw!important;
+    height: 36rem!important;
+    opacity: 1!important;
+  }
+  .transferConfirmLoading>div{
+    height: 6.4rem;
+    width: 6rem;
+    line-height: 1.8rem;
+    background-color: #4a4a4a;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 6px;
+  }
+  .transferConfirmLoading>div::before{
+    content: "";
+    display: block;
+    height: 4rem;
+    background: url("../assets/imgs/loading.png") no-repeat center center;
+    background-size: 2rem 2rem;
+    animation: transferConfLoading 3s infinite;
+  }
+  @keyframes transferConfLoading {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+
+  header .cancleBtn{
+    font-size: 4rem;
+    font-weight: bold;
+    color: $fontColor1;
+  }
+
+  .transferSuccessBox{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+  }
+  .transferSuccessBox .bgBox{
+    height: 8.34rem;
+    background: url("../assets/nkn/send/transfer@2x.png") no-repeat center/ 64.53vw auto;
+    background-color: rgba(37,58,126,1);
+    margin-bottom: 4.58rem;
+  }
+  .transferSuccessBox .tipBox{
+    padding: 0 2.45rem;
+  }
+  .tipBox .tip1{
+    height: 2rem;
+    font-size: 1.8rem;
+    font-weight: $fontWeight1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.83rem;
+  }
+  .tipBox .tip1 i{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../assets/nkn/send/check@2x.png") no-repeat center/ 100% auto;
+    margin-right: .9rem;
+  }
+  .tipBox .tip2{
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .transferSuccessBox .confirmToTransferBtn{
+    position: absolute;
+    left: 50%;
+    bottom: 7.42rem;
+    transform: translate(-50%,0);
+  }
+
+  .reciverAddInput{
+    height: 3rem;
+    line-height: 3.1rem;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0!important;
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
+    padding-right: 3.2rem;
+  }
+
+  .transferConfirmModal{
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .copyAddressBtn{
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    overflow: hidden;
+    right:0;
+    top:4px;
+    background: url("../assets/icon/autoUserIcon.png") center no-repeat;
+    background-size: 100% 100%;
+  }
+
+}

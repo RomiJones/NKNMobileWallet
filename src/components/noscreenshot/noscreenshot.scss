@@ -1,0 +1,68 @@
+noscreenshot {
+  .noScreenshotCotainer{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 9999;
+    background-color: rgba(55,56,57,.8);
+    left: 0;
+    top:0;
+    text-align: center;
+  }
+  .noScreenBox{
+    width: 280px;
+    min-height: 20rem;
+    background-color: #fff;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+  }
+  .noScreenImg{
+    height: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+  }
+  .noScreenImg::after{
+     content: "";
+     display: block;
+     height: 1px;
+     background-color: #999;
+     width: 4rem;
+     position: absolute;
+     left: 50%;
+     top: 1.6rem;
+     transform: rotate(145deg);
+     margin-left: -2rem;
+   }
+  .noScreenImg img{
+    display: block;
+    height: 100%;
+    vertical-align: top;
+    margin: 0 auto;
+  }
+  .noScreenTitle{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  .noScreenContent{
+    padding: 0 20px;
+    font-size: 1.4rem;
+    color: #999;
+    line-height: 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .noScreenBtn{
+    background-color: #c74e31;
+    color: #fff;
+    font-size: 1.4rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+}

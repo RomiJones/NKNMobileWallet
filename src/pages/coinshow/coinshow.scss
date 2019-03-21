@@ -1,0 +1,335 @@
+page-coinshow {
+  .scroll-content{
+    overflow-y: hidden;
+  }
+  .coinAssetShowBox{
+    height: 8.5rem;
+    border-bottom: .84rem solid $borderColor3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .coinNum{
+    font-size: 1.8rem;
+    font-weight: $fontWeight1;
+    margin-bottom: .9rem;
+  }
+  .coinNum>span:first-child{
+    max-width: calc(100% - 6rem);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin-right: 4px;
+  }
+  .coinAssetEs{
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .lastHistoryBox{
+    height: calc(100% - 12.6rem);
+  }
+  .txTypeBox{
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+    position: relative;
+  }
+  .txTypeBox::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .55px;
+    background: $borderColor1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .txTypeItem{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-bottom-color: transparent;
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+  }
+  .txTypeItem.active{
+    border-bottom-color: $fontColor4;
+  }
+
+  .lastHistoryContent{
+    height: calc(100% - 2rem);
+    overflow-y: auto;
+  }
+
+  .coinBtns{
+    height: 4.1rem;
+    line-height: 4.1rem;
+    width: 100vw;
+    position: absolute;
+    left:0;
+    bottom:0;
+    display: flex;
+  }
+  .coinBtns>div{
+    flex: 1;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .coinBtns i{
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #fff;
+    border-radius: 100%;
+    background-size: 1.4rem auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+    margin-top: -3px;
+    vertical-align: middle;
+  }
+  .transferBtn{
+    background-color: $fontColor3;
+  }
+  .getCoinBtn{
+    background-color: $fontColor4;
+  }
+
+  .txItem{
+    display: flex;
+    align-items: center;
+    height: 19.06vw;
+    padding-left:4vw;
+    position:relative;
+  }
+  .txItem>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .txIcon{
+    width: 5.33vw;
+    height: 5.33vw;
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-right: 2.66vw;
+  }
+  .txItem.out .txIcon{
+    background-image: url("../../assets/nkn/record/send@2x.png")
+  }
+  .txItem.in .txIcon{
+    background-image: url("../../assets/nkn/record/receive@2x.png")
+  }
+  .txItem.failed .txIcon{
+    background-image: url("../../assets/nkn/record/failed@2x.png")
+  }
+  .faidTip{
+    color: $fontColor6;
+  }
+
+  .txInfo{
+    height: 4.2rem;
+    width: calc(100% - 8.5vw);
+    border-bottom: 1px solid $borderColor2;
+    padding-right: 4vw;
+    position: relative;
+    line-height: 1.7rem;
+  }
+  .txInfo.pending{
+    border: none;
+  }
+  .txItem::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .txInfo>div{
+    width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoBoxItem{
+    width: 55%;
+  }
+  .txInfoAdd{
+    font-weight: $fontWeight2;
+  }
+  .txInfoValue{
+    width: 45%;
+    color: $fontColor3;
+    text-align: right;
+  }
+  .txInfoValue span{
+    display: inline-block;
+    max-width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  .txInfoDate{
+    color: $fontColor2;
+  }
+  .txInfoDate span{
+    display: block;
+    float: right;
+    font-size: 1.2rem;
+    color: #e74848;
+  }
+  .txConfirmProgressBox{
+    position: absolute;
+    width: 100%;
+    height: 1.3rem!important;
+    right:0;
+    bottom:0;
+    z-index: 100;
+  }
+  .txConfirmTxt{
+    line-height: 1.1rem;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-bottom: 3px;
+    color: #eee;
+  }
+  .txConfirmRange{
+    height: 2px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 100%;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .curConfirmNum{
+    height: 2px;
+    background-color: #30c0d4;
+    width: 0%;
+    transition: 0.5s linear;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  //收款二维码
+  .walletAddressQRcodeBox{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top:0;
+    z-index: 9999;
+    background-color: #fff;
+    display: none;
+    color: #fff;
+  }
+  .topLine{
+    height: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    background-color: #fff;
+    box-sizing: content-box;
+    margin-top: 1.4rem;
+  }
+  .topLine>div{
+    height: 100%;
+  }
+  .QRcodeTitle{
+    width: 10rem;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0 auto;
+  }
+  .closeQRcodeBox{
+    width: 4rem;
+    float: left;
+    background: url("../assets/imgs/close-white.png") center center no-repeat;
+    background-size: 2rem auto;
+  }
+  .QRcodeBox{
+    position: relative;
+    padding-top: 2.4rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: calc(100% - 10rem);
+  }
+  .QRcodeBox .userIcon{
+    position: absolute;
+    left:50%;
+    top:-2rem;
+    transform: translate(-50%,0);
+    text-align: center;
+    border: 1px solid $color5;
+  }
+  .QRcodeContent{
+    width: 75vw;
+    margin: 0 auto;
+  }
+  .QRcodeContent .walletName{
+    font-size: 1.8rem;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 2rem;
+  }
+  .QRcodeContent .walletName .icon{
+    height: 3.4rem;
+    width: 3.4rem;
+    border-radius: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    margin-right: 1rem;
+    float: left;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .QRcodeContent .walletName img{
+    width: 2.4rem;
+    height: 2.4rem;
+    vertical-align: top;
+  }
+  .walletQRcode{
+    height: 60vw;
+    width: 60vw;
+    margin:2.5rem auto 2rem;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .walletQRcode canvas,.walletQRcode>div{
+    width: 100%;
+    height: 100%;
+  }
+  .QRcodeContent .walletAddress{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 1rem 0;
+  }
+  .copyAddressBtn{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: $fontColor3;
+    color: #fff;
+    border-radius: 4px;
+    display: block;
+    width: 60vw;
+    margin: 0 auto;
+  }
+
+  .emptyInfo{
+    line-height: 3rem;
+    text-align: center;
+  }
+
+}

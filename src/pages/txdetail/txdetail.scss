@@ -1,0 +1,71 @@
+page-txdetail {
+  .scroll-content{
+    background: $fontColor4;
+    display: flex;
+    justify-content: center;
+    padding-top: 4vw;
+  }
+  .detailBox{
+    width: 92vw;
+    height: 143.33vw;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 10.67vw 2vw 0;
+  }
+  .statusBox{
+    border-bottom: .55px dashed $borderColor1;
+    text-align: center;
+    padding: 13.33vw 0 5.06vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 10.67vw auto;
+    background-image: url("../../assets/nkn/record/yes@2x.png");
+  }
+  .statusBox.success{
+    background-image: url("../../assets/nkn/record/yes@2x.png");
+  }
+  .statusBox.failed{
+    background-image: url("../../assets/nkn/record/yes@2x.png");
+  }
+  .statusText{
+    line-height: 1.4rem;
+    font-size: 1.4rem;
+    font-weight: $fontWeight2;
+    margin-bottom: 2vw;
+  }
+  .txDateBox{
+    line-height: 1.1rem;
+    font-size: 1rem;
+    color: $fontColor2;
+  }
+
+  .txDetailInfoBox{
+    padding: 8vw 2vw 2.5vw;
+    border-bottom: .55px dashed $borderColor1;
+  }
+  .txDetailInfoBox:last-child{
+    border: none;
+  }
+  .infoItem{
+    height: 10.3vw;
+    line-height: 5.33vw;
+    display: flex;
+    font-size: 1.2rem;
+  }
+  .infoItem:not(:last-child){
+    margin-bottom: 2.2vw;
+  }
+  .infoItem>span{
+    display: block;
+    width: 18.4vw;
+    color: $fontColor2;
+  }
+  .infoItem>div{
+    display: block;
+    width: calc(100% - 19vw);
+    color: $fontColor1;
+    font-weight: $fontWeight2;
+  }
+
+}

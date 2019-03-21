@@ -1,0 +1,107 @@
+page-walletlist {
+
+  .scroll-content{
+    background: $borderColor3;
+  }
+
+  .walletListBox{
+    background: #fff;
+    display: block;
+    padding-bottom: 10.67vw;
+  }
+  .walletItem{
+    height: 5.5rem;
+    padding:1.6rem 1.25rem 1.25rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .walletItem::after{
+    content: "";
+    display: block;
+    width: 200%;
+    height: 1px;
+    background: $borderColor1;
+    transform: scale(.5) translate(-50%,-50%);
+    position: absolute;
+    left: 5.05rem;
+    bottom: 0;
+  }
+  .walletItem:not(:last-child){
+    margin-bottom: .5rem;
+  }
+  .walletItem>div{
+    height: 100%;
+  }
+  .walletItemIcon{
+    width: 2.5rem;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-right: 1.3rem;
+  }
+  .walletItemIcon img{
+    display: block;
+  }
+  .walletItemInfo{
+    width: calc(100% - 3.8rem);
+    font-size: 1.2rem;
+  }
+  .walletItemInfo>div{
+    height: 1.3rem;
+    line-height: 1.3rem;
+  }
+  .walletItemName,.walletItemTotal{
+    font-weight: 500;
+  }
+  .walletItemAsset{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .walletItemAddress{
+    color: $fontColor2;
+    font-size: 1.1rem;
+  }
+
+  .coinBtns{
+    margin-top: 10.67vw;
+  }
+  .coinBtns>div{
+    color: #fff;
+    font-size: 1.5rem;
+    width: 79.2vw;
+    display: block;
+    height: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+  .coinBtns i{
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #fff;
+    border-radius: 100%;
+    background-size: 1.4rem 1.4rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .createWalletBtn{
+    background-color: $fontColor3;
+  }
+  .createWalletBtn i{
+    background-image: url("../assets/icon/createWallet.png");
+  }
+  .importWalletBtn{
+    background-color: $fontColor4;
+    margin-top: 4vw!important;
+  }
+  .importWalletBtn i{
+    background-image: url("../assets/icon/importWallet.png");
+  }
+
+}

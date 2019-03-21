@@ -1,0 +1,61 @@
+page-txrecordlist {
+
+
+  .txItem{
+    height: 5rem;
+    padding: 0.8rem 0;
+    position:relative;
+    margin-bottom: 8px;
+  }
+  .txItem>div{
+    float: left;
+  }
+  .txIcon{
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 100%;
+    background: url("../../assets/imgs/lastTxOut.png") no-repeat center;
+    background-color: $color4;
+    background-size: auto 1.3rem;
+    margin-right: 1rem;
+    margin-top: 0.4rem;
+  }
+  .txInfo{
+    height: 4.2rem;
+    width: calc(100% - 3.6rem);
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  .txItem::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .txInfo>div{
+    height: 1.7rem;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+  }
+  .txInfoAdd{
+    color: #666;
+    float: left;
+    width: 55%;
+  }
+  .txInfoValue{
+    width: 45%;
+    float: right;
+    color: $red;
+    text-align: right;
+  }
+  .txInfoValue span{
+    display: inline-block;
+    max-width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  .txInfoDate{
+    color: #ccc;
+  }
+}

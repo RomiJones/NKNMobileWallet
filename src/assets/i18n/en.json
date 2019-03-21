@@ -1,0 +1,152 @@
+{
+  "sysSetting":{
+    "header":"System setting",
+    "selectLang":"Language"
+  },
+  "tabs":{
+    "wallet":"Wallet",
+    "my":"My profile",
+    "news":"News"
+  },
+  "my":{
+    "header":"Profile",
+    "manageWallet":"Manage Wallets",
+    "sysSetting":"Settings",
+    "joinGroup":"Join Us",
+    "aboutUs":"About Us"
+  },
+  "asset":{
+    "totalAsset":"Total Assets"
+  },
+  "switchWallet":{
+    "header":"Select Wallet",
+    "asset":"Assets",
+    "createWallet":"Create Wallet"
+  },
+  "coinShow":{
+    "latestTxInfo":"Transaction log",
+    "transferBtn":"Send",
+    "receiveBtn":"Receive",
+    "pending":"pending",
+    "txError":"Transaction Unusual",
+    "txFailed":"Transaction Failed"
+  },
+  "transferPage":{
+    "header":"Send",
+    "balance":" Balance",
+    "receiverAddress":"Receiver's Address",
+    "keystorePw": "Password",
+    "amount":"Input Amount",
+    "memo":"Memo (optional)",
+    "miningFee":"Mining Fee",
+    "slow":"Slow",
+    "fast":"Fast",
+    "nextBtn":"Next",
+    "payRequest":{
+      "header":"Payment Request",
+      "txInfo":"Payment Info",
+      "txInfoContent":"Transfer",
+      "payTo":"To",
+      "payBy":"From",
+      "fees":"Miner Fee",
+      "amount":"Amount",
+      "confirmBtn":"Confirm"
+    },
+    "enterPw":{
+      "header":"Enter Password",
+      "inputPw":"Enter Wallet Password",
+      "confirmBtn":"Confirm",
+      "sending":"sending"
+    }
+  },
+  "receiveCode":{
+    "header":"receiving code",
+    "address":"Address",
+    "copyBtn":"Copy Wallet Address"
+  },
+  "scanCode":{
+    "header":"Scanning"
+  },
+  "joinGroup":{
+    "header":"Join Us",
+    "wechat":"wechat"
+  },
+  "aboutUs":{
+    "header":"About Us",
+    "curVersion":"Current Version：",
+    "enterWeb":"Enter the official website"
+  },
+  "manageWallet":{
+    "header":"Manage Wallet",
+    "createBtn":"Create New Wallet",
+    "importBtn":"Restore New Wallet"
+  },
+  "walletSetting":{
+    "saveBtn":"Save",
+    "walletName":"Wallet Name",
+    "edit":"Edit",
+    "exportKeystore":"Export Keystore",
+    "deleteBtn":"Delete"
+  },
+  "createWallet":{
+    "header":"Generate wallet",
+    "walletName":"Wallet Name",
+    "password":"Password",
+    "repeatPw":"Comfirm Password",
+    "agreeText":"Agreen on ",
+    "agreeUrlText":"Terms of Service and Privacy Policy",
+    "tipText":"We Can't recover the password,please backup cauiously",
+    "createBtn":"Next",
+    "importBtn":"Import Wallet",
+    "pwStrength":{
+      "low":"Weak",
+      "mid":"So-so",
+      "strong":"Good",
+      "good":"Great"
+    }
+  },
+  "importWallet":{
+    "header":"Restore wallet",
+    "tipText":"Ethereum's offical wallet uses keystore format to store encrypted private key information,you can copy and paste the content into the input field,or with the help of QR code generator",
+    "keystoreContent":"Input Keystore",
+    "inputPw":"New Password",
+    "confirmPw":"Comfirm Password",
+    "agreeText":"Agree on ",
+    "agreeUrlText":"Terms of Service and Privacy Policy",
+    "importBtn":"Next"
+  },
+  "exportKeystore":{
+    "header":"Export Keystore",
+    "titleKeystore":"Keystore",
+    "titleQRcode":"QRCode",
+    "keystoreTip":{
+        "title1":"Store Offline",
+        "text1":"Please store the Keystore to a safe offline place like a USB drive. Never put it on internet",
+        "title2":"Don't Transfer via Internet Tools",
+        "text2":"Don't use Email/Cloud Storage/Notepad/IM tools to transfer Keystore.It easily gets hacked and result in loss.",
+        "title3":"Store to Password Vault",
+        "text3":"If you like to store online please make sure some password vault apps,like 1Password/Keeppass."
+    },
+    "keystoreBtn":"Copy Keystore",
+    "copiedTip":"Copied",
+    "QRcodeTip":{
+        "title1":"Only for Transport Wallet",
+        "text1":"Forbidden to save/screenshot/take photos of the QR code. It's convenience to transport wallet to your other devices.",
+        "title2":"Using in Safe Environment",
+        "text2":"Please make sure nobody and no camera around when using. It may cause irreversible loss if somebody catch it."
+    },
+    "QRcodeShowText":{
+      "tip":"Please check arround if you are being watcheed by someone or hidden cameras.",
+      "btn":"Show QR code"
+    }
+  },
+  "firstGuide":{
+    "createBtn":"Generate a wallet",
+    "importBtn":"Restore a wallet"
+  },
+  "noScreenShot":{
+    "noPhotoTitle":"Don't screenshot",
+    "noPhotoContent":"Please check around if you are being watched by someone or hidden cameras. Don't take screenshot or photos to store wallet information.",
+    "ok":"Understood"
+  }
+}

@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NKN News</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="newsListBox borderTop10">
+    <div class="newItem" *ngFor="let item of newList" (click)="toNewDetail(item)">
+      <div class="newsImg"><img [src]="item.imgUrl"></div>
+      <div class="newInfo">
+        <div class="title">{{item.title}}</div>
+        <div class="time">{{item.date}}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

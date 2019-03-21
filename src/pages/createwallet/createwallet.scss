@@ -1,0 +1,193 @@
+page-createwallet {
+  .scroll-content{
+    padding: 0 1.875rem;
+  }
+
+  .ketstoreBox{
+    height: 110vw;
+    padding-top: 4.25rem;
+  }
+  .keystoreTip{
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $fontColor1;
+    margin-bottom: .7rem;
+  }
+  .keystoreTip i{
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: .9rem;
+    background: url("../assets/nkn/createWallet/warning@2x.png") no-repeat center;
+    background-size: 100% auto;
+  }
+  .keystoreTipContent{
+    font-size: 1.2rem;
+    color: $fontColor1;
+    line-height: 1.75rem;
+    margin-bottom: 3.34rem;
+  }
+  .keystoreValueBox{
+    transform: scale(.5) translate(-50%,-50%);
+    width: 200%;
+  }
+  .keystoreValueBox .keystoreValue{
+    border-bottom: .55px solid $borderColor2;
+    padding-bottom: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 20px;
+  }
+  .copyKeystoreBox{
+    margin-top: 2.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .copyKeystoreBox span{
+    display: block;
+    width: 5rem;
+    height: 1.67rem;
+    background: url("../assets/nkn/createWallet/copy@2x.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .walletRequireTipBox{
+    background-color: #000;
+    color: #fff;
+  }
+  .walletRequireTipBox ul{
+    margin: 0;
+  }
+  .walletRequireTipBox li{
+    font-size: 1.2rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    list-style-type: circle;
+  }
+
+  .createBtn{
+    width: 24.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    padding: 0!important;
+    font-size: 1.5rem;
+    background-color: $fontColor3;
+  }
+  .importConfirmBox{
+    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 18.66vw;
+  }
+  .pwRequireTip{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: $fontColor3;
+    margin-top: 8px;
+  }
+  .pwRequireTip.no,.strengthTip.low{
+    color: $fontColor3;
+  }
+  .pwRequireTip.yes,.strengthTip.mid,.strengthTip.strong,.strengthTip.good{
+    color: $fontColor3;
+  }
+
+  .walletPasswordItem .strengthTip{
+    position: absolute;
+    width: 10rem;
+    height: 3rem;
+    right: 0;
+    top:0;
+    text-align: right;
+    font-size: 1.2rem;
+    display: none;
+  }
+  .strengthTip>div{
+    height: 80%;
+    float: left;
+  }
+  .strengthTipText{
+    width: calc(100% - 1rem);
+    padding-right: 6px;
+  }
+  .strengthTipImg{
+    width: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    float: right!important;
+    margin-right: 2px;
+  }
+  .strengthTipImg::before,.strengthTipImg::after,.walletPasswordItem .strengthTip::after{
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #666;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+  }
+  .strengthTipImg::before{
+    top: 24%;
+  }
+  .strengthTipImg::after{
+    top: 49%;
+  }
+  .walletPasswordItem .strengthTip::after{
+    right: 2px;
+    top: 60%;
+    width: 8px;
+  }
+  .strengthSpan{
+    display: block;
+    background-color: #30c0d4;
+    transition: .2s linear;
+    height: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  .strengthSpan.low{
+    height:25%;
+  }
+  .strengthSpan.mid{
+    height:50%;
+  }
+  .strengthSpan.strong{
+    height:75%;
+  }
+  .strengthSpan.good{
+    height:100%;
+  }
+
+  .strengthTipText span{
+    line-height: 3rem;
+  }
+  .importWalletBtn{
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #30c0d4;
+    width: 10rem;
+    margin: 2.5rem auto 0;
+  }
+
+  .walletTipBox{
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    line-height: 2rem;
+    margin: 2rem 0;
+  }
+
+}

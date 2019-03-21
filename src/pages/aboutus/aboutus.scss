@@ -1,0 +1,52 @@
+page-aboutus {
+
+  .nknInfoBox{
+    height: 61.33vw;
+    padding-top: 21vw;
+    text-align: center;
+  }
+  .logo{
+    height: 10.67vw;
+    background: url("../assets/nkn/profile/logo@2x.png") no-repeat center/ auto 100%;
+    margin-bottom: 5.33vw;
+  }
+  .info1{
+    line-height: 1.4rem;
+    font-size: 1.6rem;
+    color: rgb(36,58,126);
+    margin-bottom: .5rem;
+    font-weight: bold;
+  }
+  .appVersion{
+    line-height: 1.2rem;
+    font-size: 1rem;
+    color: $fontColor2;
+  }
+
+  .groupBox{
+    .list-ios{margin: 0;}
+    .item-ios{
+      padding-left: 4vw!important;
+    }
+    .item,.item-inner{
+      border: none!important;
+    }
+    .item-inner{
+      padding-right: 4vw!important;
+    }
+    .item .label{
+      font-size: 1.2rem;
+      color: $fontColor1;
+      font-weight: $fontWeight2;
+    }
+    .item-ios ion-icon[item-left], .item-ios ion-icon[item-right], .item-ios ion-icon[item-start], .item-ios ion-icon[item-end]{
+      padding-top: 4px;
+    }
+    .note-ios{
+      color: $fontColor3;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+
+}

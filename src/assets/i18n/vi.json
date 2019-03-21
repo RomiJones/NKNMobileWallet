@@ -1,0 +1,149 @@
+{
+  "sysSetting":{
+    "header":"Cài đặt hệ thống",
+    "selectLang":"Chọn ngôn ngữ"
+  },
+  "tabs":{
+    "asset":"Tài sản",
+    "my":"Tôi"
+  },
+  "my":{
+    "header":"Tôi",
+    "manageWallet":"Quản lý ví tiền",
+    "sysSetting":"Cài đặt hệ thống",
+    "joinGroup":"Tham gia nhóm",
+    "aboutUs":"Về chúng tôi"
+  },
+  "asset":{
+    "totalAsset":"Tổng tài sản"
+  },
+  "switchWallet":{
+    "header":"Chuyển đổi ví tiền",
+    "asset":"Tài sản ví tiền",
+    "createWallet":"Tạo ví tiền"
+  },
+  "coinShow":{
+    "latestTxInfo":"Lịch sử giao dịch gần đây",
+    "transferBtn":"Chuyển tiền",
+    "receiveBtn":"Nhận tiền",
+    "pending":"Chờ ví tiền",
+    "txError":"Giao dịch bất thường",
+    "txFailed":"Giao dịch thất bại"
+  },
+  "transferPage":{
+    "header":"Chuyển tiền",
+    "balance":" Số dư",
+    "receiverAddress":"Địa chỉ ví tiền người nhận",
+    "amount":"Số tiền chuyển khoản",
+    "memo":"Ghi chú",
+    "miningFee":"Phí khai thác mỏ",
+    "slow":"Chậm",
+    "fast":"Nhanh",
+    "nextBtn":"Tiếp theo",
+    "payRequest":{
+      "header":"Chi tiết thanh toán",
+      "txInfo":"Thông tin đơn hàng",
+      "txInfoContent":"Chuyển tiền",
+      "payTo":"Địa chỉ chuyển vào",
+      "payBy":"Ví tiền thanh toán",
+      "fees":"Phí khai thác mỏ",
+      "amount":"Số tiền",
+      "confirmBtn":"Xác nhận"
+    },
+    "enterPw":{
+      "header":"Mật khẩu ví tiền",
+      "inputPw":"Hãy nhập mật khẩu",
+      "confirmBtn":"Xác nhận",
+      "sending":"Đang gửi..."
+    }
+  },
+  "receiveCode":{
+    "header":"Mã nhận tiền",
+    "address":"Địa chỉ",
+    "copyBtn":"Sao chép địa chỉ nhận tiền"
+  },
+  "scanCode":{
+    "header":"Đang quét mã..."
+  },
+  "joinGroup":{
+    "header":"Tham gia nhóm",
+    "wechat":"Nhóm Wechat"
+  },
+  "aboutUs":{
+    "header":"Về chúng tôi",
+    "curVersion":"Phiên bản hiện tại：",
+    "enterWeb":"Đến trang web NKN"
+  },
+  "manageWallet":{
+    "header":"Quản lý ví tiền",
+    "createBtn":"Tạo ví tiền",
+    "importBtn":"Dẫn vào ví tiền"
+  },
+  "walletSetting":{
+    "saveBtn":"Lưu",
+    "walletName":"Tên ví tiền",
+    "edit":"Bấm sửa",
+    "exportKeystore":"Dẫn xuất Keystore",
+    "deleteBtn":"Xóa ví tiền"
+  },
+  "createWallet":{
+    "header":"Tạo ví tiền",
+    "walletName":"Tên ví tiền",
+    "password":"Mật khẩu",
+    "repeatPw":"Lặp lại mật khẩu",
+    "agreeText":"Tôi đã đọc và đồng ý",
+    "agreeUrlText":"Điều khoản dịch vụ và riêng tư",
+    "tipText":"Chú ý! NKN không lưu mật khẩu ví tiền người dùng, cũng không thể giúp bạn tìm lại hoặc đặt lại mật khẩu, bạn phải nhớ kỹ mật khẩu",
+    "createBtn":"Tạo ví tiền",
+    "importBtn":"Dẫn vào ví tiền",
+    "pwStrength":{
+      "low":"Yếu",
+      "mid":"Bình thường",
+      "strong":"Mạnh",
+      "good":"Rất tốt"
+    }
+  },
+  "importWallet":{
+    "header":"Dẫn vào ví tiền",
+    "tipText":"Trực tiếp sao chép và dán nội dung tập tin keystore ví tiền chính thức của Ethereum vào khung nhập vào, hoặc thông qua mã QR tạo thành từ nội dung keystore, quét để đưa vào.",
+    "keystoreContent":"Nội dung tập tin keystore",
+    "inputPw":"Mật khẩu Keystore",
+    "agreeText":"Tôi đã đọc và đồng ý",
+    "agreeUrlText":"Điều khoản dịch vụ và riêng tư",
+    "importBtn":"Bắt đầu dẫn vào"
+  },
+  "exportKeystore":{
+    "header":"Dẫn xuất Keystore",
+    "titleKeystore":"Tập tin Keystore",
+    "titleQRcode":"Mã QR",
+    "keystoreTip":{
+      "title1":"Lưu ngoại tuyến",
+      "text1":"Hãy sao chép và dán tập tin Keystore vào nơi lưu trữ an toàn, ngoại tuyến. Không lưu vào email, bản ghi nhớ, đĩa mạng, công cụ trò chuyện..v..v…, vô cùng nguy hiểm",
+      "title2":"Vui lòng không truyền tải qua mạng",
+      "text2":"Vui lòng không thông qua công cụ mạng để truyền tập tin Keystore, một khi bị tin tặc lấy được sẽ tạo thành mất mát tài sản không thể tìm lại. Kiến nghị thiết bị ngoại tuyến thông qua quét mã QR để truyền.",
+      "title3":"Lưu vào két mật khẩu",
+      "text3":"Nếu cần lưu trực tuyến, thì kiến nghị sử dụng các phần mềm bảo quản mật khẩu có cấp an toàn cao hơn như 1password để lưu Keystore"
+    },
+    "keystoreBtn":"Sao chép Keystore",
+    "copiedTip":"Đã sao chép",
+    "QRcodeTip":{
+      "title1":"Chỉ dùng cho quét trực tiếp",
+      "text1":"Mã QR nghiêm cấm lưu, chụp màn hình, cũng như chụp ảnh. Chỉ dùng cho người dùng quét trực tiếp ở môi trường an toàn để thuận tiện dẫn vào ví tiền",
+      "title2":"Sử dụng ở môi trường an toàn",
+      "text2":"Vui lòng đảm bảo sử dụng khi xung quanh không có người hoặc camera. Mã QR một khi bị người khác có được sẽ gây ra tổn thất tài sản không thể lấy lại"
+    },
+    "QRcodeShowText":{
+      "tip":"Đã xác nhận xung quanh không có người và camera",
+      "btn":"Hiển thị mã QR"
+    }
+  },
+  "firstGuide":{
+    "createBtn":"Tạo ví tiền",
+    "importBtn":"Dẫn vào ví tiền"
+  },
+  "noScreenShot":{
+    "noPhotoTitle":"Vui lòng không chụp ảnh",
+    "noPhotoContent":"Vui lòng đảm bảo xung quanh không có người và camera bất kỳ! Vui lòng không chụp màn hình hoặc chụp ảnh để lưu tập tin Keystore hoặc mã QR tương ứng",
+    "ok":"Đã biết"
+  }
+}

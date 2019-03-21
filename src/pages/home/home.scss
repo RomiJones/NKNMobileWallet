@@ -1,0 +1,292 @@
+page-home {
+  .selectWalletBtn{
+    width: 4.1rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    border-radius: 10px;
+    color: $fontColor1;
+    border: .55px solid $fontColor1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .selectWalletBtn i{
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+  }
+  .selectWalletBtn.select i{
+    width: .5rem;
+    background-image: url("../assets/nkn/icon/arrow.png");
+    margin-left: 4px;
+  }
+  .selectWalletBtn.show i{
+    width: .8rem;
+    background-image: url("../assets/nkn/icon/arrows@2x.png");
+  }
+
+  .autoWalletInfoBox{
+    height: 9.58rem;
+    padding: 1.625rem 1.67rem 1.67rem 1.25rem;
+    color: $fontColor1;
+    border-bottom: .84rem solid $borderColor3;
+    font-size: 1.4rem;
+    position: relative;
+    transition: .3s linear;
+    position: relative;
+  }
+  .switchWalletBtn{
+    width: 3rem;
+    height: 3rem;
+    background: url("../assets/imgs/walletSwitch.png") center no-repeat;
+    background-size: 90% 90%;
+    position: absolute;
+    right: 2rem;
+    top: 2.2rem;
+    z-index: 1000;
+  }
+
+  .walletInfo{
+    height: 3.34rem;
+    display: flex;
+    color: $fontColor1;
+  }
+  .walletInfo>div{
+    height: 100%;
+  }
+  .userIcon{
+    width: 3.34rem;
+    background-color: #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+    margin-right: .625rem;
+    text-align: center;
+  }
+  .userIcon img{
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  .walllInfoContent{
+    width: calc(100% - 3.97rem);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.67rem;
+  }
+  .walllInfoContent>div{flex: 1}
+  .userName{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .userAddress{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .userAddress .addressBox{
+    width: calc(100% - 3rem);
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+  }
+
+  .userAddQRcode{
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: url("../assets/icon/userAddQRcode.png") no-repeat center center;
+    background-size: 100% 100%;
+    margin-left: 1rem;
+    margin-bottom: -0.1rem;
+  }
+  .userAssetEstimateBox{
+    position: relative;
+  }
+  .userEtherEsBox{
+    height: 1.6rem;
+    line-height: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $fontColor1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  .userEtherEsValue{
+    margin-left: 4px;
+  }
+  .etherEsNum{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+
+  .coinTypeListBox{
+    padding-top: 2.5rem;
+  }
+  .coinTypeListBox>h1{
+    line-height: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  .coinGroup{
+    height: 7rem;
+    position: relative;
+    color: $fontColor1;
+    padding: 1.67rem;
+  }
+  .coinGroup>div{
+    float:left;
+    height: 100%;
+  }
+  .coinGroup:not(:last-child)::after{
+    display: block;
+    content: "";
+    background: $borderColor1;
+    width: 200vw;
+    height: 1px;
+    position: absolute;
+    left: -50vw;
+    bottom: 0;
+    transform: scale(.5);
+    clear: both;
+  }
+  .coinIcon{
+    width: 3.34rem;
+    border-radius:100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  .coinIcon img{
+    display: block;
+    width: 100%;
+  }
+  .coniName{
+    margin-left: 1rem;
+    max-width: 10rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .coniName .shortName{
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .coinGroup .coniValue{
+    float:right;
+    width: 45%;
+    text-align: right;
+    line-height: 2rem;
+  }
+  .coinGroup .coniValue>div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .coinNum{
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .coinEsCNY{
+    font-size: 1.2rem;
+  }
+  .coinEsCNY span{
+    display: inline-block;
+    vertical-align: top;
+    margin-right:1px;
+  }
+  .coinEsCNY span:last-child{
+    max-width: calc(100% - 3rem);
+    margin-right: 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .walletListBox{
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+  .walletItem{
+    height: 5.5rem;
+    padding:1.6rem 1.25rem 1.25rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .walletItem::after{
+    content: "";
+    display: block;
+    width: 200%;
+    height: 1px;
+    background: $borderColor1;
+    transform: scale(.5) translate(-50%,-50%);
+    position: absolute;
+    left: 5.05rem;
+    bottom: 0;
+  }
+  .walletItem:not(:last-child){
+    margin-bottom: .5rem;
+  }
+  .walletItem>div{
+    height: 100%;
+  }
+  .walletItemIcon{
+    width: 2.5rem;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-right: 1.3rem;
+  }
+  .walletItemIcon img{
+    display: block;
+  }
+  .walletItemInfo{
+    width: calc(100% - 3.8rem);
+    font-size: 1.2rem;
+  }
+  .walletItemInfo>div{
+    height: 1.3rem;
+    line-height: 1.3rem;
+  }
+  .walletItemName,.walletItemTotal{
+    font-weight: 500;
+  }
+  .walletItemAsset{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .walletItemAddress{
+    color: $fontColor2;
+    font-size: 1.1rem;
+  }
+
+  .reciveCode{
+    width: 2rem;
+    height: 2rem;
+    background: url("../assets/nkn/icon/QRcode@2x.png") center no-repeat;
+    background-size: 100% auto;
+  }
+
+
+}

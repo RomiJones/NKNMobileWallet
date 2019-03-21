@@ -1,0 +1,33 @@
+<!--
+  Generated template for the AboutusPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'aboutUs.header' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="nknInfoBox borderBot10">
+    <div class="logo"></div>
+    <div class="info1">NKN Wallet</div>
+    <div class="appVersion"><span>v</span><span>{{appVersion}}</span></div>
+  </div>
+
+  <div class="groupBox">
+    <ion-list>
+      <ion-item *ngFor="let item of groupArray;let i = index;" class="borderBot1">
+        <span *ngIf="i != '1'">{{item.name}}</span>
+        <span *ngIf="i == '1'">{{'joinGroup.wechat' | translate }}</span>
+        <ion-note item-end (click)="copyItem(item.contact)">{{item.contact}}</ion-note>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

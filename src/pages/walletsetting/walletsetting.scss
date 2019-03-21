@@ -1,0 +1,143 @@
+page-walletsetting {
+
+  .toolbar-background-md,.scroll-content{
+    /*background-color: #f8f8f8;*/
+    overflow-y: hidden;
+  }
+
+  .toolbar-title-md{
+    font-weight: normal;
+  }
+  .walletShowBox{
+    height: 12.5rem;
+    text-align: center;
+    padding: 2rem 0 1.5rem;
+  }
+  .walletIcon{
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    margin: 0 auto 6px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+  }
+  .walletIcon img{
+    display: block;
+    max-width: 65%;
+    max-height: 65%;
+    border-radius: 100%;
+    margin: 0 auto;
+  }
+  .walletNum{
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    color: #fff;
+  }
+  .walletNum span{
+    margin: 0 2px;
+  }
+  .walletAddress{
+    line-height: 1.6rem;
+    font-size: 1rem;
+    color: #aaa;
+  }
+  .walletGroup{
+    padding: .5rem 1.6rem;
+  }
+  .walletItem{
+    border-bottom: 1px solid #eee;
+    font-size: 1.4rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    position: relative;
+  }
+  .walletItem::after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 100%;
+    right: 0;
+    top:0;
+    background: url("../assets/icon/right-Light.png") center center no-repeat;
+    background-size: 14px 14px;
+  }
+  .walletItem:last-child{
+    border-bottom: none;
+  }
+  .walletItem.walletItemName{
+    height: auto;
+  }
+  .walletItemName>div{
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .walletItemName>div:first-child{
+    line-height: 3.4rem;
+    font-size: 1.2rem;
+  }
+  .walletItemName>div:last-child{position: relative}
+  .walletItemName .editName{
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    text-align: right;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  .walletItemName::after{
+    display: none;
+  }
+  .walletGroupBox{
+    height: calc(100% - 18.5rem - 10px);
+    margin-top: 10px;
+  }
+  .walletItem.exportKeystore{
+    border-bottom: 1px solid #eee!important;
+  }
+  .deleteWalletBtn{
+    position: absolute;
+    z-index: 999;
+    width: calc(100vw - 3.2rem);
+    height: 4rem;
+    line-height: 4.1rem;
+    background-color: $fontColor3;
+    color: #ccc;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    bottom: 1.5rem;
+    left: 1.6rem;
+  }
+  .walletNameInput{
+    border: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0!important;
+    text-indent: 0!important;
+    background-color: transparent;
+  }
+  .saveWalletBtn{
+    position:absolute;
+    height: 56px;
+    line-height: 56px;
+    width: auto;
+    color: #30c0d4;
+    font-size: 1.6rem;
+    right:0;
+    top:0;
+    padding: 0 1rem;
+    z-index: 999;
+  }
+  .header ion-buttons .bar-button-default-ios,.header ion-buttons .bar-button-default-md{
+    color: $color6;
+  }
+
+}

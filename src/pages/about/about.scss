@@ -1,0 +1,131 @@
+page-about {
+
+  .scroll-content{
+    background-color: $borderColor3;
+  }
+  .myAutoShowBox{
+    color: #fff;
+    height: 53.33vw;
+    font-size: 1.4rem;
+    padding-top: 13.4vw;
+    background-color: $fontColor4;
+  }
+  .iconBox img{
+    display: block;
+    width: 14vw;
+    height: 14vw;
+    margin: 0 auto;
+  }
+  .nameBox{
+    height: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: $fontWeight1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.13vw;
+  }
+  .nameBox i{
+    display: block;
+    width: 2.7vw;
+    height: 2.7vw;
+    margin-right: 2vw;
+    background: url("../assets/nkn/profile/edit.png") no-repeat center/100% auto;
+  }
+
+  .manageWalletItem{
+    background-image: url("../assets/icon/icon-manageWallet.png");
+  }
+  .mineItem{
+    position: relative;
+  }
+  .mineItem::after,.mineGroup .item::after{
+    display: block;
+    content: "";
+    position: absolute;
+    right:1rem;
+    top:0;
+    width: 2rem;
+    height:100%;
+    background: url("../assets/icon/right-Light.png") center no-repeat;
+    background-size: 1.4rem auto;
+  }
+
+  .mineGroup{
+    margin: 2.67vw 0 0;
+  }
+  .mineGroup ion-list{
+    margin: 0!important;
+  }
+  .mineGroup .item{
+    background-color: #fff;
+    border: none!important;
+    height: 11.95vw;
+    min-height: 11.95vw;
+    padding-left: 5.48vw;
+    display: flex;
+    align-items: center;
+  }
+  .mineGroup .item .label{
+    font-size: 1.4rem;
+  }
+  .mineGroup .item-ios.item-block .item-inner{
+    border: none;
+    position: relative;
+    color: $fontColor1;
+  }
+  .mineGroup .item-ios .item-inner::before{
+    content: "";
+    display: block;
+    width: 2.98vw;
+    height: 100%;
+    position: absolute;
+    right: 2.67vw;
+    top: 0;
+    background: url("../assets/nkn/icon/arrow.png") no-repeat center/100% auto;
+    transform: rotate(-90deg);
+  }
+  .mineGroup .item-ios.item-block .item-inner::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 200%;
+    background: $borderColor1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scale(.5) translate(-50%,0);
+  }
+
+  .mineGroup .profileItem{
+    width: 4.54vw;
+    height: 4.54vw;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 6.94vw 0 0!important;
+  }
+  .itemExport{
+    background-image: url("../assets/nkn/profile/key@2x.png");
+  }
+  .itemLanguage{
+    background-image: url("../assets/nkn/profile/language@2x.png");
+  }
+  .itemManage{
+    background-image: url("../assets/nkn/profile/wallet@2x.png");
+  }
+  .itemUs{
+    background-image: url("../assets/nkn/profile/about@2x.png");
+  }
+  .itemDelete{
+    background-image: url("../assets/nkn/profile/delete@2x.png");
+  }
+
+  .mineGroup .deleteWalletBox .item-inner{
+    color: rgb(188,38,38) !important;
+  }
+  .mineGroup .deleteWalletBox .item-inner::before{
+    display: none;
+  }
+
+}

@@ -1,0 +1,96 @@
+page-switchwallet {
+
+  .walletBox{
+    padding: 2rem 2rem 0;
+    max-height: calc(100% - 7rem);
+    overflow-y: auto;
+  }
+  .walletItem{
+    height: 10rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    padding: 2rem 1.5rem 2rem 0;
+  }
+  .walletItem:last-child{
+    margin-bottom: 0;
+  }
+  .walletItem>div{height: 100%;}
+  .walletItemIcon{
+    width: 6rem;
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+  .walletItemIcon>div{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid $fontColor1;
+    display: flex;
+    align-items: center;
+  }
+  .walletItemIcon img{
+    display: block;
+    max-width: 70%;
+    max-height: 70%;
+    margin: 0 auto;
+  }
+  .walletItemInfo{
+    margin-left: 6rem;
+  }
+  .walletItemInfo>div{
+    height:3rem;
+    line-height: 3rem;
+    color: #4a4a4a;
+    font-size: 1.4rem;
+  }
+  .walletItemName{
+    border-bottom: 1px solid $fontColor1;
+  }
+  .walletItemAsset>span:first-child{
+    display: block;
+    float: left;
+    height: 3rem;
+    line-height: 3rem;
+    width: 8rem;
+    font-size: 1.3rem;
+  }
+
+  .walletItemAssetNum{
+    float: right;
+    text-align: right;
+    width: calc(100% - 8rem);
+    color: #ccc;
+    height: 3rem;
+    line-height: 3.4rem;
+  }
+  .walletItemAssetNum i{
+    font-style: normal;
+    font-size: 2rem;
+    color: #4a4a4a;
+    height: 3rem;
+    line-height: 3rem;
+    display: inline-block;
+    vertical-align: top;
+    max-width: calc(100% - 3rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    margin-right: 4px;
+  }
+
+  .walletItemAsset::after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  .nknBtn{
+    margin: 1.5rem auto;
+    width: calc(100vw - 4rem);
+  }
+
+}

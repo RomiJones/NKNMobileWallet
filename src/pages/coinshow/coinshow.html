@@ -1,0 +1,97 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{coinName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-round-down"
+      pullingText=""
+      refreshingSpinner="ios"
+      refreshingText=""
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!--资产-->
+  <div class="coinAssetShowBox">
+    <div class="coinNum"><span>{{coinNum}}</span><span>{{coinName}}</span></div>
+    <div class="coinAssetEs"><span>$</span><span>{{coinAssetEs}}</span></div>
+  </div>
+
+  <!--交易记录-->
+  <div class="lastHistoryBox">
+    <div class="txTypeBox">
+      <div class="txTypeItem" *ngFor="let item of txTypeArray;let i = index" [ngClass]="{active: txTypeIndex == i }" (click)="switchTxType(i)">{{item}}</div>
+    </div>
+
+    <div class="lastHistoryContent">
+      <div class="emptyInfo" *ngIf="!txInfo.length">&sim;</div>
+
+      <div class="txItem" [ngClass]="{ failed: !item.status,out:item.status }" *ngFor="let item of txInfo" (click)="checkDetail(item)" >
+        <div class="txIcon" ></div>
+        <div class="txInfo" [ngClass]="{ pending: lastTxHash == item.txHash }">
+
+          <div>
+            <div class="infoBoxItem" *ngIf="item.status">
+              <div class="txInfoAdd">{{item.addressShorten}}</div>
+              <div class="txInfoDate">{{item.txDate}}</div>
+            </div>
+            <div class="txInfoValue" *ngIf="item.status">- <span>{{item.txValue}}</span></div>
+
+            <div *ngIf="!item.status">
+              <div class="faidTip">Failed</div>
+              <div class="txInfoDate">{{item.txDate}}</div>
+            </div>
+
+            <!--<div class="txInfoNum">
+              <span *ngIf="!item.status">{{'coinShow.txFailed' | translate }}</span>
+              <span *ngIf=" txError == item.txHash">{{'coinShow.txError' | translate }}</span>
+            </div>
+            <div class="txConfirmProgressBox" *ngIf=" lastTxHash == item.txHash ">
+              <div class="txConfirmTxt">
+                <div *ngIf=" lastConfirmNum == 0">{{'coinShow.pending' | translate }}</div>
+                <div *ngIf=" lastConfirmNum > 0">{{lastConfirmNum}} / 12</div>
+              </div>
+              <div class="txConfirmRange"><div class="curConfirmNum"></div></div>
+            </div>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--交易按钮-->
+  <div class="coinBtns">
+    <div class="getCoinBtn" (click)="showReceiveCode()"><span>{{'coinShow.receiveBtn' | translate }}</span></div>
+    <div class="transferBtn" (click)="toTransferCoin()"><span>{{'coinShow.transferBtn' | translate }}</span></div>
+  </div>
+
+</ion-content>
+
+<!-- 收款二维码 -->
+<div class="walletAddressQRcodeBox">
+  <div class="topLine">
+    <div class="closeQRcodeBox" (click)="hideQRcode()"></div>
+    <div class="QRcodeTitle">{{'receiveCode.header' | translate }}</div>
+  </div>
+  <div class="QRcodeBox">
+    <div class="QRcodeContent">
+      <div class="walletName">
+        <div class="icon"><img src="{{walletIcon}}" alt=""></div><span>{{walletName}}</span>
+      </div>
+      <div style="font-size: 1.4rem">{{'receiveCode.address' | translate }}：</div>
+      <div class="walletAddress">{{walletAddress}}</div>
+      <div class="walletQRcode"><div></div></div>
+      <button class="copyAddressBtn" (click)="copyReciveAddress()">{{copyBtnText}}</button>
+    </div>
+  </div>
+</div>
+
+

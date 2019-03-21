@@ -1,0 +1,33 @@
+<ion-content >
+
+  <div class="myAutoShowBox">
+      <div class="iconBox"><img [src]="walletIcon" alt=""></div>
+      <div class="nameBox" (click)="changeName()"><i></i><span>{{walletName}}</span></div>
+  </div>
+
+  <div class="mineGroup">
+    <ion-list>
+      <ion-item (click)="inputPw('export')">
+        <div class="profileItem itemExport" item-start></div>
+        <span>Export Private Key</span>
+      </ion-item>
+      <ion-item [navPush]="language">
+        <div class="profileItem itemLanguage" item-start></div>
+        <span>Language</span>
+      </ion-item>
+      <ion-item [navPush]="walletList">
+        <div class="profileItem itemManage" item-start></div>
+        <span>Manage Wallet</span>
+      </ion-item>
+      <ion-item [navPush]="aboutUs">
+        <div class="profileItem itemUs" item-start></div>
+        <span>About Us</span>
+      </ion-item>
+      <ion-item class="deleteWalletBox" (click)="deleteWallet()">
+        <div class="profileItem itemDelete" item-start></div>
+        <span>Delete Wallet</span>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

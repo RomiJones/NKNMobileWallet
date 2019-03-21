@@ -1,0 +1,53 @@
+
+<ion-header>
+
+  <ion-navbar class="appHeader1">
+    <ion-title>Receive {{coinName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="walletBox">
+    <div class="box1">
+      <div class="walletTypeBox"><span>{{coinName}}</span> Wallet</div>
+      <div class="walletAdrBox">
+        <span>{{walletAddress}}</span>
+        <div class="copyBtn white" (click)="copyWalletAddress()"></div>
+      </div>
+    </div>
+    <div class="box2">
+      <div class="qrCodeBox">
+        <div class="qrBox1">Please transfer <span>{{coinName}}</span></div>
+        <div class="qrcode" id="qrcode"></div>
+        <div class="qrLogo"></div>
+      </div>
+
+      <div class="btnsBox">
+        <div class="btnItem btn1" (click)=" isSelectType = true "><i></i><span>Switch Asset</span></div>
+        <div class="btnItem btn2" (click)="inputAmount()"><i></i><span>Amount</span></div>
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>
+
+<div class="assetTypeBox" *ngIf="isSelectType">
+  <div>
+    <div class="typeItem typeContentItem1">Select Asset Type</div>
+    <div class="typeItem coinItem itemEth" (click)="selectType('ETH')">
+      <div class="typeContentItem2">
+        <div class="name">ETH</div>
+        <div class="num">Balance: <span>{{ethNum}}</span> ETH</div>
+      </div>
+    </div>
+    <div class="typeItem coinItem itemNkn" (click)="selectType('NKN')">
+      <div class="typeContentItem2">
+        <div class="name">NKN</div>
+        <div class="num">Balance: <span>{{nknNum}}</span> NKN</div>
+      </div>
+    </div>
+  </div>
+</div>

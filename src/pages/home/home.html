@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="showQRcode()">
+        <div class="reciveCode" ></div>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      <div class="selectWalletBtn select" *ngIf="!isSelectWallet" (click)="showWalletList()"><span>NKN</span><i></i></div>
+      <div class="selectWalletBtn show" *ngIf="isSelectWallet" (click)=" isSelectWallet=false "><i></i></div>
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="scanQRcode()">
+        <span class="scanQRcode" ></span>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)" pullMax="200">
+    <ion-refresher-content pullingIcon="ios" refreshingSpinner="ios"></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- 钱包资产信息模块 -->
+  <div class="autoWalletInfoBox">
+      <div class="userAssetEstimateBox">
+          <div class="walletInfo">
+            <div class="userIcon"><img src="{{walletIcon}}" alt=""></div>
+            <div class="walllInfoContent">
+              <div class="userName">{{walletName}}</div>
+              <div class="userAddress" (click)="copyWalletAddress()">
+                <div class="addressBox">{{walletAddress}}</div>
+                <div class="copyBtn"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="userEtherEsBox" >
+            <div class="etherEsNum"><span>$</span><span class="userEtherEsValue">{{userTotalAssetEs}}</span></div>
+          </div>
+      </div>
+  </div>
+
+  <!-- 资产列表模块 -->
+  <div class="coinTypeListBox">
+      <h1>Assets</h1>
+
+      <div class="coinGroup" (click)="toCoinShowPageETH()">
+          <div class="coinIcon"><img src="assets/nkn/home/ETH@2x.png" alt=""></div>
+          <div class="coniName">
+            <div class="shortName">ETH</div>
+          </div>
+          <div class="coniValue">
+              <div class="coinNum">{{etherNum}}</div>
+              <div class="coinEsCNY"><span>$</span><span>{{etherEs}}</span></div>
+          </div>
+      </div>
+
+      <div class="coinGroup" (click)="toCoinShowPageNKN()">
+        <div class="coinIcon"><img src="assets/nkn/home/NKNcoin@2x.png" alt=""></div>
+        <div class="coniName">
+          <div class="shortName">NKN-ERC20</div>
+        </div>
+        <div class="coniValue">
+          <div class="coinNum">{{nknNum}}</div>
+          <div class="coinEsCNY"><span>$</span><span>{{nknEs}}</span></div>
+        </div>
+      </div>
+
+  </div>
+
+  <!--所有钱包列表-->
+  <div class="walletListBox" *ngIf="isSelectWallet">
+    <div class="walletItem" *ngFor="let item of walletAccounts;let i = index;" (click)="selectWallet(i)">
+      <div class="walletItemIcon"><img src="{{item.imgUrl}}"></div>
+      <div class="walletItemInfo">
+        <div class="walletItemName">{{item.walletName}}</div>
+        <div class="walletItemAsset">
+          <span class="walletItemAddress">{{item.walletAddressShorten}}</span>
+          <span class="walletItemTotal">$<i>{{item.assetEsTotal}}</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+
+
+

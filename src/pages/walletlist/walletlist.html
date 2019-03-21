@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'manageWallet.header' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="walletListBox borderTop10" >
+
+    <div class="walletItem" *ngFor="let item of walletAccounts;let i = index;" (click)="selectWallet(i)">
+      <div class="walletItemIcon"><img src="{{item.imgUrl}}"></div>
+      <div class="walletItemInfo">
+        <div class="walletItemName">{{item.walletName}}</div>
+        <div class="walletItemAsset">
+          <span class="walletItemAddress">{{item.walletAddressShorten}}</span>
+          <span class="walletItemTotal">$<i>{{item.assetEsTotal}}</i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="coinBtns">
+      <div class="createWalletBtn" (click)="toCreateWallet()"><span>{{'manageWallet.createBtn' | translate }}</span></div>
+      <div class="importWalletBtn" (click)="toImportWallet()"><span>{{'manageWallet.importBtn' | translate }}</span></div>
+    </div>
+
+  </div>
+
+
+
+</ion-content>

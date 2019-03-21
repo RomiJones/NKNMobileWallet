@@ -1,0 +1,134 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'transferPage.header' | translate }} {{coinName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <div class="coinInfoBox borderTop10">
+      <div class="coinInfo1">
+        <div>Value</div>
+        <div class="coinInfoNum"><span>{{'transferPage.balance' | translate }}：</span><span class="num">{{coinNum}}</span><span>{{coinName}}</span></div>
+      </div>
+
+      <div class="coinInfo2">
+        <div class="amount">
+          <ion-item>
+            <ion-input type="number" [(ngModel)]="transferNum" placeholder="{{'transferPage.amount' | translate }}"></ion-input>
+          </ion-item>
+        </div>
+        <div class="name">{{coinName}}</div>
+      </div>
+    </div>
+
+    <div class="transferForm borderTop10">
+      <div class="formItem">
+        <div class="itemType">From</div>
+        <div class="address ellipsis">{{walletAddress}}</div>
+      </div>
+
+      <div class="formItem">
+        <div class="itemType">To</div>
+        <div class="itemInput itemInputAddress">
+          <ion-item>
+            <ion-input type="text" placeholder="{{'transferPage.receiverAddress' | translate }}" [(ngModel)]="reciverAdd"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+
+      <div class="formItem">
+        <div class="itemInput">
+          <ion-input type="text" placeholder="{{'transferPage.memo' | translate }}" [(ngModel)]="remarks"></ion-input>
+        </div>
+      </div>
+    </div>
+
+    <div class="gasRange borderTop10">
+      <div class="title">
+        <div>{{'transferPage.miningFee' | translate }}</div>
+        <div class="coastEtherEs"><span>{{coastEtherEs}}</span><span>ehter</span><span>&asymp;</span><span>$<i>{{coastDollarEs}}</i></span></div>
+      </div>
+      <ion-range min="1.00" max="100.00" step="0.01" [(ngModel)]="gasRangePrice" (ionChange)="gasLimitChange()"></ion-range>
+    </div>
+
+    <div class="nextBtn">
+      <button (click)="next()">{{'transferPage.payRequest.confirmBtn' | translate }}</button>
+    </div>
+
+    <div class="transferSuccessBox" *ngIf="transferModal == 'success' ">
+      <div class="bgBox"></div>
+      <div class="tipBox">
+        <div class="tip1"><i></i><span>Transfer initiated</span></div>
+        <div class="tip2">Your transfer is in progress, it might take a few seconds until final confirmation. You can check this transaction on record. </div>
+      </div>
+      <div class="confirmToTransferBtn" navPop>OK</div>
+    </div>
+</ion-content>
+
+<div class="transferConfirmModal" *ngIf="transferModal == 'show' ">
+  <div *ngIf="tranferState == 'confirm' " class="showTransferInfoBox">
+    <header>
+      <ion-icon name="close" (click)="closeModal()" class="cancleBtn" ></ion-icon>
+      <span>{{'transferPage.payRequest.header' | translate }}</span>
+      <span style="width: 1.25rem"></span>
+    </header>
+    <div class="transferModalForm">
+      <div class="transferNumItem">{{transferNum}} <span>{{coinName}}</span></div>
+
+      <div class="tranferConfirmItem">
+        <div class="itemName">{{'transferPage.payRequest.txInfo' | translate }}</div>
+        <div class="itemCont"><span>{{coinName}}</span> {{'transferPage.payRequest.txInfoContent' | translate }}</div>
+      </div>
+      <div class="tranferConfirmItem reciverAdd">
+        <div class="itemName">{{'transferPage.payRequest.payTo' | translate }}</div>
+        <div class="itemCont">{{reciverAdd}}</div>
+      </div>
+      <div class="tranferConfirmItem">
+        <div class="itemName">{{'transferPage.payRequest.payBy' | translate }}</div>
+        <div class="itemCont">{{walletAddress}}</div>
+      </div>
+      <div class="tranferConfirmItem">
+        <div class="itemName">{{'transferPage.payRequest.fees' | translate }}</div>
+        <div class="itemCont">
+          <div class="gasTotal"><span>{{coastEtherEs}}</span> ehter</div>
+          <!--<div class="gasCalc"><span>&asymp;</span><span>Gas ({{gasLimit}})</span><span> * Gas Price</span><span> ({{gasRangePrice}} gwei)</span></div>-->
+        </div>
+      </div>
+
+    </div>
+
+    <div class="confirmToTransferBtn" (click)="toInputPw()">{{'transferPage.nextBtn' | translate }}</div>
+  </div>
+
+  <div *ngIf=" tranferState == 'inputPw' " class="inputPwBox">
+    <header>
+      <ion-icon name="arrow-back" (click)="backConfirm()" class="backBtn" ></ion-icon>
+      <span>{{'transferPage.enterPw.header' | translate }}</span>
+      <span style="width: 1.25rem"></span>
+    </header>
+    <div>
+      <ion-label stacked>{{'transferPage.enterPw.inputPw' | translate }}</ion-label>
+
+      <div class="itemInputPw">
+        <ion-input type="text" placeholder="{{'transferPage.keystorePw' | translate }}" [(ngModel)]="keystorePw" *ngIf="!isHidePW"></ion-input>
+        <ion-input type="password" placeholder="{{'transferPage.keystorePw' | translate }}" [(ngModel)]="keystorePw" *ngIf="isHidePW"></ion-input>
+        <div class="passwordHideBtn" [ngClass]="{show: !isHidePW,hidePw:isHidePW }" (click)="isHidePW = !isHidePW ">
+      </div>
+    </div>
+
+      <div class="confirmToTransferBtn" (click)="confirmToTransfer()">{{'transferPage.enterPw.confirmBtn' | translate }}</div>
+
+    </div>
+
+  </div>
+
+  <div class="transferConfirmLoading">
+      <div>{{'transferPage.enterPw.sending' | translate }}</div>
+  </div>
+</div>
+
+
+

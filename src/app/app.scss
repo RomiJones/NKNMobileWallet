@@ -1,0 +1,438 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+$color1:#60b6c5;
+$color2:#31bcd3;
+$color3:#292b97;
+$color4:#479ef8;
+$color5:#00c0ff;
+$color6:#30c0d4;
+$color7:#006dc2;
+$red:#f00;
+
+
+
+$fontColor1:rgb(41,46,58);
+$fontColor2:rgb(189,193,206);
+$fontColor3:rgb(49,139,236);
+$fontColor4:rgb(54,74,129);
+$fontColor5:rgb(123,127,138);
+$fontColor6:rgb(188,38,38);
+$fontWeight1: 600;
+$fontWeight2: 500;
+$borderColor1: rgb(238,238,238);
+$borderColor2: rgb(211,211,211);
+$borderColor3: rgb(247,247,249);
+
+
+/*标题栏样式*/
+.toolbar-background{
+  background-color: #fff;
+  border-color: #ecebeb;
+}
+.back-button-icon-ios{
+  color: $fontColor1;
+}
+.toolbar-ios{
+  padding: 0 1.25rem;
+}
+.toolbar-ios ion-buttons{margin: 0}
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+  border-color: $borderColor1;
+}
+
+.appHeader1 .toolbar-background-ios{
+  background: rgb(54,74,129);
+  border: none;
+}
+.appHeader1 .toolbar-background-ios::after{
+  content: "";
+  display: block;
+  width: 200vw;
+  height: 1px;
+  background-color: $borderColor1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(.5) translate(-50%,0);
+}
+.appHeader1 .back-button .back-button-icon-ios{
+  color: #fff;
+}
+.appHeader1 .toolbar-title{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff!important;
+}
+
+/*通用样式*/
+.toolbar-title{font-size: 1.6rem!important;color: #252933!important;}
+.scroll-content{
+  user-select: text!important;
+  color: $fontColor1;
+  background-color: #fff;
+}
+ion-content.has-refresher > .scroll-content{
+  overflow-y: hidden!important;
+}
+ion-content.has-refresher > .scroll-content{
+  border: none;
+}
+.scanQRcode{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../assets/nkn/icon/scan@2x.png");
+}
+.copyBtn{
+  display: block;
+  width: 8vw;
+  height: 2.67vw;
+  background: url("../assets/nkn/createWallet/copy@2x.png") no-repeat left top;
+  background-size: 100% auto;
+}
+.copyBtn.white{
+  background-image: url("../assets/nkn/receive/copywhite@2x.png");
+}
+i{font-style: normal}
+.copyCode{pointer-events: all;}
+.copyCode .toast-wrapper{
+  text-align: center;
+  width: 12rem;
+}
+.copyCode .toast-message{
+  padding: 1rem;
+}
+.borderTop10{
+  border-top: 2.67vw solid $borderColor3;
+}
+.borderBot10{
+  border-bottom: 2.67vw solid $borderColor3;
+}
+.borderBot1::before{
+  content: "";
+  display: block;
+  width: 200%;
+  height: 1px;
+  background: $borderColor3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(.5) translate(-50%,0);
+}
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.alert-ios .alert-button:last-child{
+  font-weight: normal;
+}
+.alert-ios .alert-title{
+  font-size: 1.6rem;
+}
+.deleteWallet{
+  color: rgb(195,22,22) !important;
+}
+
+/*创建钱包页面*/
+.walletForm{
+  height: 110vw;
+  padding-top: 24vw;
+}
+.walletItem:not(:last-child){
+  margin-bottom: .25rem;
+}
+.walletItem input{
+  height: 3.4rem;
+  line-height: 3.4rem;
+  border: none;
+  border-bottom: .55px solid $borderColor2;
+  font-size: 1.4rem;
+  color: $fontColor1;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 0!important;
+  background-color: transparent;
+}
+.walletItem input::-webkit-input-placeholder{
+  color: $fontColor2;
+  font-size: 1.4rem;
+}
+.passwordHideBtn{
+  width: 2rem;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+.passwordHideBtn.show{
+  background-image: url("../assets/nkn/createWallet/eye@2x.png");
+}
+.passwordHideBtn.hidePw{
+  background-image: url("../assets/nkn/createWallet/closeeye@2x.png");
+}
+.walletPasswordItem{
+  position: relative;
+  height: 3.4rem;
+  border-bottom: .55px solid $borderColor2;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.walletPasswordItem input{
+  width: calc(100% - 4rem);
+}
+
+/* 导航栏样式 */
+.tabs .tab-button{
+  color:$fontColor1!important;
+}
+.tabs-ios .tab-button[aria-selected=true],.tabs-md .tab-button[aria-selected=true]{
+  color:$fontColor3!important;
+}
+.tabs-ios .tabbar{
+  border-top-color: $borderColor1;
+  background-color: #fff!important;
+}
+.tabs .footer-md::before,.tabs-md .tabbar::before{
+  display: none!important;
+}
+.ion-ios-wallet::before{
+  background: url("../assets/nkn/home/walletblue@2x.png") center center no-repeat;
+  background-size: 1.83rem 1.83rem;
+  content:"";
+  display: block;
+  height:100%;
+}
+.ion-ios-wallet-outline::before{
+  background: url("../assets/nkn/home/wallet@2x.png") center center no-repeat;
+  background-size: 1.83rem 1.83rem;
+  content:"";
+  display: block;
+  height:100%;
+}
+.ion-ios-my::before{
+  background: url("../assets/nkn/home/profileblue@2x.png") center center no-repeat;
+  background-size: 1.83rem 1.83rem;
+  content:"";
+  display: block;
+  height:100%;
+}
+.ion-ios-my-outline::before{
+  background: url("../assets/nkn/home/profile@2x.png") center center no-repeat;
+  background-size: 1.83rem 1.83rem;
+  content:"";
+  display: block;
+  height:100%;
+}
+.ion-ios-news::before{
+  background: url("../assets/nkn/home/Newsblue@2x.png") center center no-repeat;
+  background-size: 1.83rem 1.83rem;
+  content:"";
+  display: block;
+  height:100%;
+}
+.ion-ios-news-outline::before{
+  background: url("../assets/nkn/home/News@2x.png") center center no-repeat;
+  background-size: 1.83rem 1.83rem;
+  content:"";
+  display: block;
+  height:100%;
+}
+
+.tab-button-icon{
+  margin-top: 6px!important;
+}
+.tab-button-text{
+  margin-bottom: 4px!important;
+}
+
+
+input, textarea {
+  -webkit-user-select: text !important;
+  -khtml-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  -o-user-select: text !important;
+  user-select: text !important;
+}
+.loading-md .loading-wrapper{
+  border-radius: 10px;
+}
+
+.alert-md .alert-input-group{
+  padding: 0 20px 10px;
+}
+.alert-md .alert-message{
+  text-align: center;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  color: #666;
+}
+.alert-button.activated{
+  background-color: transparent!important;
+}
+
+/*调用相机扫描时透明背景优化样式*/
+ion-app{
+  background:none transparent!important;
+}
+html, body.transparent-body, .transparent-body, .transparent-body ion-app, .transparent-body .app-root, .transparent-body ion-nav, .transparent-body .ion-page, .transparent-body .nav-decor, .transparent-body ion-content, .transparent-body .viewscan, .transparent-body .fixed-content, .transparent-body .scroll-content { background-color: transparent !important; background: transparent !important; }
+
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+  padding: 0;
+}
+.checkbox-ios-secondary .checkbox-checked {
+  border-color: $color2;
+  background-color: $color2;
+}
+
+.alert-ios .alert-wrapper{
+  position: fixed;
+  align-self: center;
+  margin-top: -20px;
+}
+.alert-ios .alert-sub-title{
+  margin-top: 10px;
+}
+.alert-ios .alert-message:empty{
+  padding-bottom: 4px!important;
+}
+
+.tabs-ios .toggleListBtn{
+  top:4rem;
+}
+.tabs-ios .walletSideBox .walletGroup{
+  padding: 2.5rem 0 2.5rem;
+}
+
+.checkbox-md .checkbox-checked .checkbox-inner{
+  top:1px;
+  left:5px;
+}
+input{
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+
+/* 适配iphoneX,iphoneXS */
+@media only screen and (device-width: 375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3){
+  page-home,page-about{
+    .scroll-content{
+      padding-top: 48px!important;
+    }
+    .scroll-content::before{
+      background-color: transparent!important;
+    }
+    ion-refresher{
+      top:48px!important;
+    }
+  }
+  .walletAddressQRcodeBox{
+    padding-top: 28px!important;
+  }
+  .coinBtns{
+    bottom:36px!important;
+  }
+  page-transfercoin{
+    header.ios{
+      padding-top: 36px!important;
+      height: 82px!important;
+    }
+    .transferConfirmModal>div{
+      bottom:36px!important;
+    }
+  }
+  .deleteWalletBtn{
+    bottom:36px!important;
+  }
+
+}
+
+/* 适配iphoneXR */
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2){
+  page-home,page-about{
+    .scroll-content{
+      padding-top: 48px!important;
+    }
+    .scroll-content::before{
+      background-color: transparent!important;
+    }
+    ion-refresher{
+      top:48px!important;
+    }
+  }
+  .walletAddressQRcodeBox{
+    padding-top: 28px!important;
+  }
+  .coinBtns{
+    bottom:36px!important;
+  }
+  page-transfercoin{
+    header.ios{
+      padding-top: 36px!important;
+      height: 82px!important;
+    }
+    .transferConfirmModal>div{
+      bottom:36px!important;
+    }
+  }
+  .deleteWalletBtn{
+    bottom:36px!important;
+  }
+}
+
+/* 适配iphoneXS Max */
+@media only screen and (device-width: 414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3){
+  page-home,page-about{
+    .scroll-content{
+      padding-top: 48px!important;
+    }
+    .scroll-content::before{
+      background-color: transparent!important;
+    }
+    ion-refresher{
+      top:48px!important;
+    }
+  }
+  .walletAddressQRcodeBox{
+    padding-top: 28px!important;
+  }
+  .coinBtns{
+    bottom:36px!important;
+  }
+  page-transfercoin{
+    header.ios{
+      padding-top: 36px!important;
+      height: 82px!important;
+    }
+    .transferConfirmModal>div{
+      bottom:36px!important;
+    }
+  }
+  .deleteWalletBtn{
+    bottom:36px!important;
+  }
+}
+
