@@ -70,6 +70,9 @@ $borderColor3: rgb(247,247,249);
   bottom: 0;
   transform: scale(.5) translate(-50%,0);
 }
+.appHeader1.appHeader2 .toolbar-background-ios::after{
+  display: none;
+}
 .appHeader1 .back-button .back-button-icon-ios{
   color: #fff;
 }

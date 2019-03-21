@@ -40,6 +40,7 @@ export class MyApp {
 
       if(platform.is('ios')){
         AppConfig.deviceSys='ios';
+        statusBar.styleDefault();
       }else if(platform.is('android')){
         AppConfig.deviceSys='android';
       }

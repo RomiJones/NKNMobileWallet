@@ -34,7 +34,6 @@ export class KeystorePage {
 
   initQRcode(){
     let code= this.keystore;
-    console.log(code);
     $("#qrcode").empty().qrcode({
       render: "canvas",
       text: JSON.stringify(code)
